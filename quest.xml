@@ -1,0 +1,397 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<savequest>
+    <price>30</price>
+    <type>
+        <title>Für welches Betriebssystem möchten Sie eine App entwickeln?</title>
+        <description>Für welches Betriebssystem möchten Sie eine App entwickeln?</description>
+        <answer1>
+            <name>iOS (Apple)</name>
+            <desc>iOS (Apple)</desc>
+            <hour>160</hour>
+        </answer1>
+        <answer2>
+            <name>Android</name>
+            <desc>Android</desc>
+            <hour>160</hour>
+        </answer2>
+        <answer3>
+            <name>Windows Mobile</name>
+            <desc>Windows Mobile</desc>
+            <hour>160</hour>
+        </answer3>
+        <answer4>
+            <name>iOS + Android</name>
+            <desc>iOS + Android</desc>
+            <hour>320</hour>
+            <percent>1.5</percent>
+        </answer4>
+        <answer5>
+            <name>iOS + Android + Windows Mobile</name>
+            <desc>iOS + Android + Windows Mobile</desc>
+            <hour>480</hour>
+            <percent>2</percent>
+        </answer5>
+    </type>
+    
+    <device>
+        <title>Auf welchen Endgeräten soll die App laufen?</title>
+        <description>Auf welchen Endgeräten soll die App laufen?</description>
+        <answer1>
+            <name>Handy</name>
+            <desc>Handy</desc>
+        </answer1>
+        <answer2>
+            <name>Tablet</name>
+            <desc>Tablet</desc>
+        </answer2>
+        <answer3>
+            <name>Beides</name>
+            <desc>Beides</desc>
+            <percent>1.4</percent>            
+        </answer3>
+    </device>
+    
+    <interface>
+        <title>Welche grafische Benutzeroberfläche (Interface) soll Ihre App haben?</title>
+        <description>Welche grafische Benutzeroberfläche (Interface) soll Ihre App haben?</description>
+        <answer1>
+            <name>Standard Benutzeroberfläche (Interface) des jeweiligen Betriebsystems (iOS, Android, Windows Phone).</name>
+            <desc>Standard Benutzeroberfläche (Interface) des jeweiligen Betriebsystems (iOS, Android, Windows Phone).</desc>
+            <hour>0</hour>
+        </answer1>
+        <answer2>
+            <name> Eine individuelle Lösung.</name>
+            <desc> Eine individuelle Lösung.</desc>
+            <hour>30</hour>
+        </answer2>
+        <answer3>
+            <name>Ich weiss es nicht. Ich würde gerne beraten werden.</name>
+            <desc>Ich weiss es nicht. Ich würde gerne beraten werden.</desc>
+            <hour>20</hour>
+        </answer3>
+    </interface>
+    
+    <payments>
+        <title>Soll Ihre App eine Bezahlmöglichkeit bieten?</title>
+        <description>Soll Ihre App eine Bezahlmöglichkeit bieten?</description>
+        <answer1>
+            <name>Ja</name>
+            <desc>Ja</desc>
+            <hour>40</hour>
+        </answer1>
+        <answer2>
+            <name>Nein</name>
+            <desc>Nein</desc>
+            <hour>0</hour>
+        </answer2>
+        <answer3>
+            <name>Noch nicht, vielleicht später.</name>
+            <desc>Noch nicht, vielleicht später.</desc>
+            <hour>20</hour>
+        </answer3>
+    </payments>
+    
+    <login>
+        <title>Benötigt Ihre App eine Log-in Funktion?</title>
+        <description>Benötigt Ihre App eine Log-in Funktion?</description>
+        <answer1>
+            <name>Ja, mit Social Log-in.</name>
+            <desc>Ja, mit Social Log-in.</desc>
+            <hour>60</hour>
+        </answer1>
+        <answer2>
+            <name>Ja, mit E-Mail Log-in.</name>
+            <desc>Ja, mit E-Mail Log-in.</desc>
+            <hour>40</hour>
+        </answer2>
+        <answer3>
+            <name>Nein</name>
+            <desc>Nein</desc>
+            <hour>0</hour>
+        </answer3>
+        <answer4>
+            <name>Ich weiss es nicht. Ich würde gerne beraten werden.</name>
+            <desc>Ich weiss es nicht. Ich würde gerne beraten werden.</desc>
+            <hour>50</hour>
+        </answer4>
+    </login>
+    
+    <sync>
+        <title>Soll es mit Ihrer App möglich sein, Daten zwischen verschiedenen Endgeräten zu synchronisieren?</title>
+        <description>Soll es mit Ihrer App möglich sein, Daten zwischen verschiedenen Endgeräten zu synchronisieren?</description>
+        <answer1>
+            <name>Ja, Kundendaten sollen in der Cloud gespeichert sein.</name>
+            <desc>Ja, Kundendaten sollen in der Cloud gespeichert sein.</desc>
+            <hour>10</hour>
+        </answer1>
+        <answer2>
+            <name>Nein</name>
+            <price>0</price>
+            <desc>Nein</desc>
+            <hour>0</hour>
+        </answer2>
+        <answer3>
+            <name>Ich weiss es nicht. Ich würde gerne beraten werden.</name>
+            <desc>Ich weiss es nicht. Ich würde gerne beraten werden.</desc>
+            <hour>5</hour>
+        </answer3>
+    </sync>
+    
+    <rate>
+        <title>Soll die App über ein System zum Benoten oder Bewerten verfügen?</title>
+        <description>Soll die App über ein System zum Benoten oder Bewerten verfügen?</description>
+        <answer1>
+            <name> Ja</name>
+            <desc> Ja</desc>
+            <hour>40</hour>
+        </answer1>
+        <answer2>
+            <name>Nein</name>
+            <desc>Nein</desc>
+            <hour>0</hour>
+        </answer2>
+        <answer3>
+            <name>Noch nicht, vielleicht später.</name>
+            <desc>Noch nicht, vielleicht später.</desc>
+            <hour>20</hour>
+        </answer3>
+    </rate>
+    
+    <graphics>
+        <title>Benötigen Sie Unterstützung von unserem Grafik Design Team?</title>
+        <description>Benötigen Sie Unterstützung von unserem Grafik Design Team?</description>
+        <answer1>
+            <name>Ja</name>
+            <hour>60</hour>
+            <desc>Ja</desc>
+        </answer1>
+        <answer2>
+            <name>Nein, ich liefere selbst alle benötigten Grafiken.</name>
+            <hour>0</hour>
+            <desc>Nein, ich liefere selbst alle benötigten Grafiken.</desc>
+        </answer2>
+    </graphics>
+	
+    <profiles>
+        <title>Sollen Kunden Ihre eigenen Profile anlegen und speichern können?</title>
+        <description>Sollen Kunden Ihre eigenen Profile anlegen und speichern können?</description>
+        <answer1>
+            <name>Ja</name>
+            <desc>Ja</desc>
+            <hour>40</hour>
+        </answer1>
+        <answer2>
+            <name>Nein</name>
+            <desc>Nein</desc>
+            <hour>0</hour>
+        </answer2>
+        <answer3>
+            <name>Ich weiss es nicht. Ich würde gerne beraten werden.</name>
+            <desc>Ich weiss es nicht. Ich würde gerne beraten werden.</desc>
+            <hour>20</hour>
+        </answer3>
+    </profiles>
+    
+    <website>
+        <title>Benötigen Sie zur App eine zusätzliche Webseite?</title>
+        <description>Benötigen Sie zur App eine zusätzliche Webseite?</description>
+        <answer1>
+            <name>Ja</name>
+            <desc>Ja</desc>
+            
+        </answer1>
+        <answer2>
+            <name>Nein</name>
+            <desc>Nein</desc>
+            
+        </answer2>
+        <answer3>
+            <name>Noch nicht, vielleicht später.</name>
+            <desc>Noch nicht, vielleicht später.</desc>
+            <hour>100</hour>
+        </answer3>
+    </website>
+    
+    <project>
+        <title>In welchem Stadium ist Ihr Projekt?</title>
+        <description>In welchem Stadium ist Ihr Projekt?</description>
+        <answer1>
+            <name>Idee</name>
+            <desc>Idee</desc>
+            <percent>1.4</percent>
+        </answer1>
+        <answer2>
+            <name>Entwurf</name>
+            <desc>Entwurf</desc>
+            <percent>1.3</percent>
+        </answer2>
+        <answer3>
+            <name>Es existiert ein Prototyp.</name>
+            <desc>Es existiert ein Prototyp.</desc>
+            <percent>1.2</percent>
+        </answer3>
+    </project>
+    
+    <wtype>
+        <title>Was für eine Art von Webseite soll es sein?</title>
+        <description>Was für eine Art von Webseite soll es sein?</description>
+        <answer1>
+            <name>Informations-Webseite</name>
+            <hour>100</hour>
+            <desc>Informations-Webseite</desc>
+        </answer1>
+        <answer2>
+            <name>Community / Social Webseite</name>
+            <hour>250</hour>
+            <desc>Community / Social Webseite</desc>
+        </answer2>
+        <answer3>
+            <name>Online Business Webseite</name>
+            <hour>300</hour>
+            <desc>Online Business Webseite</desc>
+        </answer3>
+        <answer4>
+            <name>E-Commerce Webseite</name>
+            <hour>300</hour>
+            <desc>E-Commerce Webseite</desc>
+        </answer4>
+        <answer5>
+            <name>Nichts dergleiches</name>
+            <hour>200</hour>
+            <desc>Nichts dergleiches</desc>
+        </answer5>
+    </wtype>
+    
+    <based>
+        <title>Benötigt Ihre Webseite ein Content Management System?</title>
+        <description>Benötigt Ihre Webseite ein Content Management System?</description>
+        <answer1>
+            <name> Ja, ein Standard CMS (Wordpress, Drupal, Typo3, Joomla).</name>
+            <hour>50</hour>
+            <desc> Ja, ein Standard CMS (Wordpress, Drupal, Typo3, Joomla).</desc>
+        </answer1>
+        <answer2>
+            <name>Ja, eine individuelle Lösung.</name>
+            <hour>120</hour>
+            <desc>Ja, eine individuelle Lösung.</desc>
+        </answer2>
+        <answer3>
+            <name>Ich weiss es nicht. Ich würde gerne beraten werden.</name>
+            <hour>70</hour>
+            <desc>Ich weiss es nicht. Ich würde gerne beraten werden.</desc>
+        </answer3>
+    </based>
+    
+    <languages>
+        <title>In wie vielen Sprachen soll Ihre Webseite verfügbar sein?</title>
+        <description>In wie vielen Sprachen soll Ihre Webseite verfügbar sein?</description>
+        <answer1>
+            <name>1</name>
+            <hour>0</hour>
+            <desc>1</desc>
+        </answer1>
+        <answer2>
+            <name>2 - 3</name>
+            <hour>60</hour>
+            <desc>2-3</desc>
+        </answer2>
+        <answer3>
+            <name>Mehr als 3.</name>
+            <hour>100</hour>
+            <desc>Mehr als 3.</desc>
+        </answer3>
+    </languages>
+    
+    <responsive>
+        <title>Soll sich die Darstellung Ihrer Webseite automatisch nach dem Endgerät richten, mit dem sie aufgerufen wird (Responsive Webdesign)?</title>
+        <description>Soll sich die Darstellung Ihrer Webseite automatisch nach dem Endgerät richten, mit dem sie aufgerufen wird (Responsive Webdesign)?</description>
+        <answer1>
+            <name>Ja</name>
+            <hour>40</hour>
+            <desc>Ja</desc>
+        </answer1>
+        <answer2>
+            <name>Nein</name>
+            <hour>0</hour>
+            <desc>Nein</desc>
+        </answer2>
+        <answer3>
+            <name>Ich weiss es nicht. Ich würde gerne beraten werden.</name>
+            <hour>20</hour>
+            <desc>Ich weiss es nicht. Ich würde gerne beraten werden.</desc>
+        </answer3>
+    </responsive>
+    
+    <design>
+        <title>Benötigen Sie Unterstützung von unserem Grafik Design Team?</title>
+        <description>Benötigen Sie Unterstützung von unserem Grafik Design Team?</description>
+        <answer1>
+            <name>Ja</name>
+            <hour>60</hour>
+            <desc>Ja</desc>
+        </answer1>
+        <answer2>
+            <name>Nein, ich liefere selbst alle benötigten Grafiken.</name>
+            <hour>0</hour>
+            <desc>Nein, ich liefere selbst alle benötigten Grafiken.</desc>
+        </answer2>
+    </design>
+	    
+    <marketing>
+        <title>Benötigen Sie Unterstützung für die Suchmaschinenoptmierung (SEO) und das Suchmaschinenmarketing (SEM)?</title>
+        <description>Benötigen Sie Unterstützung für die Suchmaschinenoptmierung (SEO) und das Suchmaschinenmarketing (SEM)?</description>
+        <answer1>
+            <name>Ja</name>
+            <hour>40</hour>
+            <desc>Ja</desc>
+        </answer1>
+        <answer2>
+            <name>Nein</name>
+            <hour>0</hour>
+            <desc>Nein</desc>
+        </answer2>
+        <answer3>
+            <name>Ich weiss es nicht. Ich würde gerne beraten werden.</name>
+            <hour>25</hour>
+            <desc>Ich weiss es nicht. Ich würde gerne beraten werden.</desc>
+        </answer3>
+    </marketing>
+             
+    <wproject>
+        <title>In welchem Stadium ist Ihr Projekt?</title>
+        <description>In welchem Stadium ist Ihr Projekt?</description>
+        <answer1>
+            <name>Idee</name>
+            <desc>Idee</desc>
+            <percent>1.4</percent>
+        </answer1>
+        <answer2>
+            <name>Entwurf</name>
+            <desc>Entwurf</desc>
+            <percent>1.3</percent>
+        </answer2>
+        <answer3>
+            <name>Es existiert ein Prototyp.</name>
+            <desc>Es existiert ein Prototyp.</desc>
+            <percent>1.2</percent>
+        </answer3>
+    </wproject>
+    
+    <app>
+        <title>Benötigen Sie zur Webseite zusätzlich eine App?</title>
+        <description>Benötigen Sie zur Webseite zusätzlich eine App?</description>
+        <answer1>
+            <name>Ja</name>
+            <desc>Ja</desc>
+        </answer1>
+        <answer2>
+            <name>Nein</name>
+            <desc>Nein</desc>
+        </answer2>
+        <answer3>
+            <name>Noch nicht, vielleicht später.</name>
+            <desc>Noch nicht, vielleicht später.</desc>
+        </answer3>
+    </app>
+    
+</savequest>
