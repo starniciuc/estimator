@@ -78,7 +78,8 @@ p.light{
 .logo-winify{
 	position: absolute;
 	top:7%;
-	left: calc(50% - 62px);
+	left: 50%;
+	margin-left: -62px;
 }
 .logo-winify a{
 	opacity: 0.35;
