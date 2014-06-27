@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 <savequest>
-    <price>30</price>
+    <price>15</price>
     <type>
         <title>Für welches Betriebssystem möchten Sie eine App entwickeln?</title>
         <description>Für welches Betriebssystem möchten Sie eine App entwickeln?</description>
@@ -236,9 +236,9 @@
         <title>Was für eine Art von Webseite soll es sein?</title>
         <description>Was für eine Art von Webseite soll es sein?</description>
         <answer1>
-            <name>Informations-Webseite</name>
+            <name>Internet Auftritt</name>
             <hour>100</hour>
-            <desc>Informations-Webseite</desc>
+            <desc>Internet Auftritt</desc>
         </answer1>
         <answer2>
             <name>Community / Social Webseite</name>
@@ -246,9 +246,9 @@
             <desc>Community / Social Webseite</desc>
         </answer2>
         <answer3>
-            <name>Online Business Webseite</name>
+            <name>Dynamisches Web Portal</name>
             <hour>300</hour>
-            <desc>Online Business Webseite</desc>
+            <desc>Dynamisches Web Portal</desc>
         </answer3>
         <answer4>
             <name>E-Commerce Webseite</name>

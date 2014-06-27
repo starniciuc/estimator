@@ -58,7 +58,9 @@ $xml = loadFromXML();
 
 	<body class="no-underline">
 		<div class="table-wrapper">
-
+			<div class="logo-winify">
+				<a href="/"><img src="img/sur.1.png"></a>
+			</div>
 			<div class="cell-wrapper">
 
 				<div class="entry js-entry" id="start">
@@ -76,7 +78,7 @@ $xml = loadFromXML();
 						<div class="wrapper">
 							<div id="output" style="display: none;">
 								<div class="progress progress-success">
-									<h3 class="js-average heading">&euro; <span>0</span></h3>
+									<!---<h3 class="js-average heading">&euro; <span>0</span></h3>--->
 									<div class="bar js-bar" style="width: 0%;"></div>
 								</div> <!-- close .progress .progress-success -->
 							</div> <!-- close #output -->
@@ -805,6 +807,10 @@ $xml = loadFromXML();
 						<div class="wrapper">
 							<div id="estimate">
 								<div class="invoice well">
+									<div class="head-winify">
+										<a href="/"><img src="img/winify-color.png"></a>
+										<hr>
+									</div>
 									<?php
 									if ($app == "web") {
 										require_once("before.php");
@@ -844,8 +850,11 @@ $xml = loadFromXML();
 											<button type="submit" href="#" class="btn btn-block btn-danger">Absenden</button>
 										</form>
 									</div> <!-- close .helper -->
+									<br>
+									<div class="head-winify">
+										<a href="/"><img src="img/winify-color.png"></a>
+									</div>
 								</div> <!-- close .invoice -->
-
 							</div> <!-- close #estimate -->
 						</div> <!-- close .wrapper -->
 					</div> <!-- close .entry -->

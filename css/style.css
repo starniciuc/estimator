@@ -278,9 +278,29 @@ a{
     font-style: italic;
     font-size: 26px;
 }
-
+.wrapper .content form{
+	width: 960px;
+	margin: 0 auto;
+}
+.logo-winify{
+	position: absolute;
+	top:7%;
+	left: calc(50% - 62px);
+}
+.logo-winify a{
+	opacity: 0.35;
+	transition-duration: 0.7s;
+}
+.logo-winify a:hover{
+	opacity: 0.65;
+	transition-duration: 0.7s;
+}
 @media screen and (max-width: 499px)
 {
+	.logo-winify{
+		display: none;
+	}
+	
 	.indexContent{
 		top:20%;
 	}

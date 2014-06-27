@@ -23,11 +23,11 @@ if($_SERVER['REQUEST_METHOD'] == "POST" && $_POST['setPrice'] == "Change")
                 if($_SERVER['REQUEST_METHOD'] == "POST" && $_POST['setPrice'] == "Change")
                 {
                     $price = $_POST['ehour']*1;
-                    if($price>=20 && $price<=50){
+                    if($price>=10 && $price<=50){
                         saveNewPrice($price);
                         echo "<h1>New price is set successfully.</h1>";
                     }else{   
-                        echo "<h2>Price should be higher than 20 and lower than 50!</h2>";
+                        echo "<h2>Price should be higher than 10 and lower than 50!</h2>";
                     }
                     
                 }                  

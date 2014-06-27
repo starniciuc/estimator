@@ -23,7 +23,25 @@
             <input type="text" name="answeHour1" value="<?php echo $xml->wtype->answer1->hour; ?>" class="price" maxlength="3"/>
 		</div>
     </div>
-    
+     
+    <div class="answer">
+    	<div class="imgContent">
+    		<img src="img/commerce-icon.png">		
+    	</div> 
+		<div class="inputBlock">
+            <h3>Name</h3>
+			<input type="text" name="answeName4" value="<?php echo $xml->wtype->answer4->name; ?>"/>
+		</div>
+        <div class="inputBlock">
+            <h3>Description</h3>
+            <input type="text" name="answeDesc4" value="<?php echo $xml->wtype->answer4->desc; ?>"/>
+		</div>
+        <div class="inputBlock">
+            <h3>Hour</h3>
+            <input type="text" name="answeHour4" value="<?php echo $xml->wtype->answer4->hour; ?>" class="price" maxlength="3"/>
+		</div>
+    </div>
+	
     <div class="answer">
     	<div>
     		<img src="img/comunity-icon.png">		
@@ -59,25 +77,7 @@
             <input type="text" name="answeHour3" value="<?php echo $xml->wtype->answer3->hour; ?>" class="price" maxlength="3"/>
 		</div>
     </div>  
-    
-    <div class="answer">
-    	<div class="imgContent">
-    		<img src="img/commerce-icon.png">		
-    	</div> 
-		<div class="inputBlock">
-            <h3>Name</h3>
-			<input type="text" name="answeName4" value="<?php echo $xml->wtype->answer4->name; ?>"/>
-		</div>
-        <div class="inputBlock">
-            <h3>Description</h3>
-            <input type="text" name="answeDesc4" value="<?php echo $xml->wtype->answer4->desc; ?>"/>
-		</div>
-        <div class="inputBlock">
-            <h3>Hour</h3>
-            <input type="text" name="answeHour4" value="<?php echo $xml->wtype->answer4->hour; ?>" class="price" maxlength="3"/>
-		</div>
-    </div>
-    
+       
     <div class="answer">
     	<div class="imgContent">
     		<img src="img/other-icon.png">		
