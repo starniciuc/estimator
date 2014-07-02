@@ -5,7 +5,6 @@ $xml = loadFromXML();
 ?>
 <!DOCTYPE html>
 <html>
-
 	<head>
 		<title>Projektrechner :: Winify</title>
 		<meta charset="utf8">
