@@ -4,6 +4,7 @@ $xml = loadFromXML();
 @$app = $_POST['dir'] ? $_POST['dir'] : "";
 ?>
 <!DOCTYPE html>
+
 <html>
 	<head>
 		<title>Projektrechner :: Winify</title>
