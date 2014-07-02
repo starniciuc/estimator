@@ -896,9 +896,15 @@ $xml = loadFromXML();
 										</form>
 									</div> <!-- close .helper -->
 									<br>
-									<div class="head-winify">
+									<div class="foot-winify">
 										<a href="/" onclick="_gaq.push(['_trackEvent', 'PCalculator', 'CalcClick', 'C3WinifyHomeFt',time]);"><img src="img/winify-color.png"></a>
 									</div>
+									<div class="contact">
+										<p><strong>Kontakt:</strong></p>
+										<p>+41 41 511 2684 (Schweiz)</p>
+										<p>+49 177 88 458 12 (Deutschland)</p>
+									</div>
+									<div class="clearfix"></div>
 								</div> <!-- close .invoice -->
 							</div> <!-- close #estimate -->
 						</div> <!-- close .wrapper -->

@@ -89,7 +89,19 @@ p.light{
 	opacity: 0.65;
 	transition-duration: 0.7s;
 }
-
+.foot-winify{
+	float: left;
+}
+.contact{
+	float: right;
+	text-align: right;
+	padding-bottom: 25px;
+}
+.contact p{
+	margin: 0;
+	font-size: 14px!important;
+	line-height: 18px !important;
+}
 @media only screen and (max-width: 640px){
 	.logo-winify{
 		display: none;
