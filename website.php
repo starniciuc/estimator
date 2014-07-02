@@ -240,7 +240,7 @@ $xml = loadFromXML();
 									</div>
 									<div class="span2">
 										<div class="descrip">
-											<p>Eine dynamische Webseite, die verschiedene Möglichkeiten bietet, mit dem User zu interagieren.User können Kundenkonten anlegen und untereinander in Kontakt treten.</p>
+											<p>Eine dynamische Webseite, die verschiedene Möglichkeiten bietet, mit dem User zu interagieren. User können Kundenkonten anlegen und untereinander in Kontakt treten.</p>
 										</div>
 									</div>
 									<div class="span2">
