@@ -2,10 +2,10 @@
     $listSelectedText = explode('+',$_POST['features']);
     $listSelectedImage = explode('+',$_POST['images']);
     $listSelectedDescription = explode("+", $_POST['descriptions']);
-    ($_POST['dir'] == "app")?$title = "Application":$title="Website";
+    ($_POST['dir'] == "app")?$title = "Mobile Application":$title="Website";
 ?>
 <div class="clearfix first-line">
-			<h1 class="heading weight-bold">Unsere Kostenschätzung für Ihr Projekt:</h1>
+			<h1 class="heading weight-bold">Unsere Kostenschätzung für Ihr Projekt - <?php echo $title; ?></h1>
 <!-- <a href="#" class="btn btn-small btn-primary" id="share" title="Share your estimate and scope with a friend">Share</a> -->
 </div> <!-- close .clearfix -->
 
@@ -36,4 +36,6 @@
 <h1 class="descriptor">Geschätzte Kosten: </h1>
 <h1 class="total">&euro;<span><?php echo $_POST['budget'];?></span></h1>
 <p class="info_price">Bitte beachten Sie, dass es sich hierbei um eine nicht bindende, grobe Einschätzung der Kosten für Ihr Projekt handelt.</p>
+<br>
+<br>
 <br>

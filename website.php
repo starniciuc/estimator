@@ -695,7 +695,7 @@ $xml = loadFromXML();
 									?>
 
 									<div class="clearfix first-line">
-										<h1 class="heading weight-bold">Unsere Kostenschätzung für Ihr Projekt:</h1>
+										<h1 class="heading weight-bold">Unsere Kostenschätzung für Ihr Projekt - Website</h1>
 										<!-- <a href="#" class="btn btn-small btn-primary" id="share" title="Share your estimate and scope with a friend">Share</a> -->
 									</div> <!-- close .clearfix -->
 									<ul class="unstyled js-scope">
