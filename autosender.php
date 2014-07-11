@@ -6,9 +6,9 @@ $selected = isset($_POST['before']) ? $_POST['before'] . "+" : "";
 $selected .= isset($_POST['values']) ? $_POST['values'] : "";
 
 $arr = array(
-	'name' => "IP-".$_SERVER['REMOTE_ADDR'],
+	'name' => "IP-".$_SERVER['HTTP_X_FORWARDED_FOR'],
 	'email' => "no-email",
-	'message' => $_POST['mess'],
+	'message' => "is autosender",
 	'obudget' => isset($_POST['obudget']) ? $_POST['obudget'] : "0",
 	'budget' => $_POST['budget'],
 	'type' => isset($_POST['type']) ? $_POST['type'] : "0"
