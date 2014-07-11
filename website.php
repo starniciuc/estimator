@@ -7,7 +7,8 @@ $xml = loadFromXML();
 <html>
 
 	<head>
-		<title>Projektrechner :: Winify</title>
+		<title>Kosten für eine Webseite schätzen</title>
+		<meta name="Description" content="Mit dem Projektrechner in nur wenigen Minuten herausfinden, was ihre Website kosten wird!">
 		<meta charset="utf8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
 		<link rel="stylesheet" type="text/css" href="css/estimator.css" />
@@ -56,48 +57,51 @@ $xml = loadFromXML();
 			});
 		</script>
 		<script>
-		var time = 0;
-		var wtime = 0;
-			setInterval(function(){
-			time++;
-			wtime++;
-		}, 1000);
-			
-		$(document).click(function() {
-			//console.log(time);
-			time = 0;
-		});
+			var time = 0;
+			var wtime = 0;
+			setInterval(function() {
+				time++;
+				wtime++;
+			}, 1000);
+
+			$(document).click(function() {
+				//console.log(time);
+				time = 0;
+			});
 		</script>
 		<script>
-				var _gaq = _gaq || [];
-				  _gaq.push(['_setAccount', 'UA-52113605-1']);
-				  _gaq.push(['_trackPageview']);
-				  
-					(function() {
-					var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-					ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-					var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-				  })();
+			var _gaq = _gaq || [];
+			_gaq.push(['_setAccount', 'UA-52113605-1']);
+			_gaq.push(['_trackPageview']);
 
-				(function(i, s, o, g, r, a, m) {
-					i['GoogleAnalyticsObject'] = r;
-					i[r] = i[r] || function() {
+			(function() {
+				var ga = document.createElement('script');
+				ga.type = 'text/javascript';
+				ga.async = true;
+				ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+				var s = document.getElementsByTagName('script')[0];
+				s.parentNode.insertBefore(ga, s);
+			})();
 
-						(i[r].q = i[r].q || []).push(arguments)
-					}, i[r].l = 1 * new Date();
-					a = s.createElement(o),
-							m = s.getElementsByTagName(o)[0];
-					a.async = 1;
-					a.src = g;
-					m.parentNode.insertBefore(a, m)
+			(function(i, s, o, g, r, a, m) {
+				i['GoogleAnalyticsObject'] = r;
+				i[r] = i[r] || function() {
 
-				})(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+					(i[r].q = i[r].q || []).push(arguments)
+				}, i[r].l = 1 * new Date();
+				a = s.createElement(o),
+						m = s.getElementsByTagName(o)[0];
+				a.async = 1;
+				a.src = g;
+				m.parentNode.insertBefore(a, m)
+
+			})(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
 
 
 
-				ga('create', 'UA-52113605-1', 'auto');
+			ga('create', 'UA-52113605-1', 'auto');
 
-				ga('send', 'pageview');
+			ga('send', 'pageview');
 
 
 
@@ -106,11 +110,11 @@ $xml = loadFromXML();
 
 	<body class="no-underline">
 		<div class="table-wrapper">
-			
+
 			<div class="logo-winify">
-				<a href="/" onclick="_gaq.push(['_trackEvent', 'PCalculator', 'CalcClick', 'C2WinifyHome',wtime]);"><img src="img/sur.1.png"></a>
+				<a href="/" onclick="_gaq.push(['_trackEvent', 'PCalculator', 'CalcClick', 'C2WinifyHome', wtime]);"><img src="img/sur.1.png"></a>
 			</div>
-			
+
 			<div class="cell-wrapper">
 				<div class="entry js-entry" id="start">
 					<div class="wrapper featured">
@@ -147,7 +151,7 @@ $xml = loadFromXML();
 							<div class="row-fluid">
 								<div class="row">
 									<div class="span2">
-										<a href="#" onclick="_gaq.push(['_trackEvent', 'PCalculator', 'CalcClick', 'W1Informational',time]);">
+										<a href="#" onclick="_gaq.push(['_trackEvent', 'PCalculator', 'CalcClick', 'W1Informational', time]);">
 											<div>
 												<div class="flip-container" data-value="<?php echo $xml->wtype->answer1->desc; ?>" data-constant="<?php echo $xml->wtype->answer1->hour; ?>">
 													<div class="flipper">
@@ -163,7 +167,7 @@ $xml = loadFromXML();
 										</a>
 									</div>
 									<div class="span2">
-										<a href="#" onclick="_gaq.push(['_trackEvent', 'PCalculator', 'CalcClick', 'W1E-commerce',time]);">
+										<a href="#" onclick="_gaq.push(['_trackEvent', 'PCalculator', 'CalcClick', 'W1E-commerce', time]);">
 											<div>
 												<div class="flip-container" data-value="<?php echo $xml->wtype->answer4->desc; ?>" data-constant="<?php echo $xml->wtype->answer4->hour; ?>">
 													<div class="flipper">
@@ -179,7 +183,7 @@ $xml = loadFromXML();
 										</a>
 									</div>
 									<div class="span2">
-										<a href="#" onclick="_gaq.push(['_trackEvent', 'PCalculator', 'CalcClick', 'W1Social',time]);">
+										<a href="#" onclick="_gaq.push(['_trackEvent', 'PCalculator', 'CalcClick', 'W1Social', time]);">
 											<div>
 												<div class="flip-container" data-value="<?php echo $xml->wtype->answer2->desc; ?>" data-constant="<?php echo $xml->wtype->answer2->hour; ?>">
 													<div class="flipper">
@@ -195,7 +199,7 @@ $xml = loadFromXML();
 										</a>
 									</div>
 									<div class="span2">
-										<a href="#" onclick="_gaq.push(['_trackEvent', 'PCalculator', 'CalcClick', 'W1Portal',time]);">
+										<a href="#" onclick="_gaq.push(['_trackEvent', 'PCalculator', 'CalcClick', 'W1Portal', time]);">
 											<div>
 												<div class="flip-container" data-value="<?php echo $xml->wtype->answer3->desc; ?>" data-constant="<?php echo $xml->wtype->answer3->hour; ?>">
 													<div class="flipper">
@@ -211,7 +215,7 @@ $xml = loadFromXML();
 										</a>
 									</div>						
 									<div class="span2">
-										<a href="#" onclick="_gaq.push(['_trackEvent', 'PCalculator', 'CalcClick', 'W1Other',time]);">
+										<a href="#" onclick="_gaq.push(['_trackEvent', 'PCalculator', 'CalcClick', 'W1Other', time]);">
 											<div>
 												<div class="flip-container" data-value="<?php echo $xml->wtype->answer5->desc; ?>" data-constant="<?php echo $xml->wtype->answer5->hour; ?>">
 													<div class="flipper">
@@ -268,7 +272,7 @@ $xml = loadFromXML();
 							</div> <!-- close .row-fluid -->
 							<div class="row-fluid">
 								<div class="span4">
-									<a href="#" onclick="_gaq.push(['_trackEvent', 'PCalculator', 'CalcClick', 'W2wCMS',time]);">
+									<a href="#" onclick="_gaq.push(['_trackEvent', 'PCalculator', 'CalcClick', 'W2wCMS', time]);">
 										<div>
 											<div class="flip-container" data-constant="<?php echo $xml->based->answer1->hour; ?>" data-value="<?php echo $xml->based->answer1->desc; ?>">
 												<div class="flipper">
@@ -284,7 +288,7 @@ $xml = loadFromXML();
 									</a>
 								</div>
 								<div class="span4">
-									<a href="#" onclick="_gaq.push(['_trackEvent', 'PCalculator', 'CalcClick', 'W2customCMS',time]);">
+									<a href="#" onclick="_gaq.push(['_trackEvent', 'PCalculator', 'CalcClick', 'W2customCMS', time]);">
 										<div>
 											<div class="flip-container" data-constant="<?php echo $xml->based->answer2->hour; ?>" data-value="<?php echo $xml->based->answer2->desc; ?>">
 												<div class="flipper">
@@ -300,7 +304,7 @@ $xml = loadFromXML();
 									</a>
 								</div>
 								<div class="span4">
-									<a href="#" onclick="_gaq.push(['_trackEvent', 'PCalculator', 'CalcClick', 'W2NotSureCMS',time]);">
+									<a href="#" onclick="_gaq.push(['_trackEvent', 'PCalculator', 'CalcClick', 'W2NotSureCMS', time]);">
 										<div>
 											<div class="flip-container" data-constant="<?php echo $xml->based->answer3->hour; ?>" data-value="<?php echo $xml->based->answer3->desc; ?>">
 												<div class="flipper">
@@ -330,7 +334,7 @@ $xml = loadFromXML();
 							</div> <!-- close .row-fluid -->
 							<div class="row-fluid">
 								<div class="span4">
-									<a href="#" onclick="_gaq.push(['_trackEvent', 'PCalculator', 'CalcClick', 'W3Lang1',time]);">
+									<a href="#" onclick="_gaq.push(['_trackEvent', 'PCalculator', 'CalcClick', 'W3Lang1', time]);">
 										<div>
 											<div class="flip-container" data-constant="<?php echo $xml->languages->answer1->hour; ?>" data-value="<?php echo $xml->languages->answer1->desc; ?>">
 												<div class="flipper">
@@ -346,7 +350,7 @@ $xml = loadFromXML();
 									</a>
 								</div>
 								<div class="span4">
-									<a href="#" onclick="_gaq.push(['_trackEvent', 'PCalculator', 'CalcClick', 'W3Lang2',time]);">
+									<a href="#" onclick="_gaq.push(['_trackEvent', 'PCalculator', 'CalcClick', 'W3Lang2', time]);">
 										<div>
 											<div class="flip-container" data-constant="<?php echo $xml->languages->answer2->hour; ?>" data-value="<?php echo $xml->languages->answer2->desc; ?>">
 												<div class="flipper">
@@ -362,7 +366,7 @@ $xml = loadFromXML();
 									</a>
 								</div>
 								<div class="span4">
-									<a href="#" onclick="_gaq.push(['_trackEvent', 'PCalculator', 'CalcClick', 'W3Lang3+',time]);">
+									<a href="#" onclick="_gaq.push(['_trackEvent', 'PCalculator', 'CalcClick', 'W3Lang3+', time]);">
 										<div>
 											<div class="flip-container" data-constant="<?php echo $xml->languages->answer3->hour; ?>" data-value="<?php echo $xml->languages->answer3->desc; ?>">
 												<div class="flipper">
@@ -392,7 +396,7 @@ $xml = loadFromXML();
 							</div> <!-- close .row-fluid -->
 							<div class="row-fluid">
 								<div class="span4">
-									<a href="#" onclick="_gaq.push(['_trackEvent', 'PCalculator', 'CalcClick', 'W4MobileResponsive',time]);">
+									<a href="#" onclick="_gaq.push(['_trackEvent', 'PCalculator', 'CalcClick', 'W4MobileResponsive', time]);">
 										<div>
 											<div class="flip-container" data-constant="<?php echo $xml->responsive->answer1->hour; ?>" data-value="<?php echo $xml->responsive->answer1->desc; ?>">
 												<div class="flipper">
@@ -408,7 +412,7 @@ $xml = loadFromXML();
 									</a>
 								</div>
 								<div class="span4">
-									<a href="#" onclick="_gaq.push(['_trackEvent', 'PCalculator', 'CalcClick', 'W4NotMobileResponsive',time]);">
+									<a href="#" onclick="_gaq.push(['_trackEvent', 'PCalculator', 'CalcClick', 'W4NotMobileResponsive', time]);">
 										<div>
 											<div class="flip-container" data-constant="<?php echo $xml->responsive->answer2->hour; ?>" data-value="<?php echo $xml->responsive->answer2->desc; ?>">
 												<div class="flipper">
@@ -424,7 +428,7 @@ $xml = loadFromXML();
 									</a>
 								</div>
 								<div class="span4">
-									<a href="#" onclick="_gaq.push(['_trackEvent', 'PCalculator', 'CalcClick', 'W4NotSureResponsive',time]);">
+									<a href="#" onclick="_gaq.push(['_trackEvent', 'PCalculator', 'CalcClick', 'W4NotSureResponsive', time]);">
 										<div>
 											<div class="flip-container" data-constant="<?php echo $xml->responsive->answer3->hour; ?>" data-value="<?php echo $xml->responsive->answer3->desc; ?>">
 												<div class="flipper">
@@ -453,7 +457,7 @@ $xml = loadFromXML();
 							</div> <!-- close .row-fluid -->
 							<div class="row-fluid">
 								<div class="span6">
-									<a href="#" onclick="_gaq.push(['_trackEvent', 'PCalculator', 'CalcClick', 'W5wDesign',time]);">
+									<a href="#" onclick="_gaq.push(['_trackEvent', 'PCalculator', 'CalcClick', 'W5wDesign', time]);">
 										<div>
 											<div class="flip-container" data-constant="<?php echo $xml->design->answer1->hour; ?>" data-value="<?php echo $xml->design->answer1->desc; ?>">
 												<div class="flipper">
@@ -469,7 +473,7 @@ $xml = loadFromXML();
 									</a>
 								</div>
 								<div class="span6">
-									<a href="#" onclick="_gaq.push(['_trackEvent', 'PCalculator', 'CalcClick', 'W5NotDesign',time]);">
+									<a href="#" onclick="_gaq.push(['_trackEvent', 'PCalculator', 'CalcClick', 'W5NotDesign', time]);">
 										<div>
 											<div class="flip-container" data-constant="<?php echo $xml->design->answer2->hour; ?>" data-value="<?php echo $xml->design->answer2->desc; ?>">
 												<div class="flipper">
@@ -499,7 +503,7 @@ $xml = loadFromXML();
 							</div> <!-- close .row-fluid -->
 							<div class="row-fluid">
 								<div class="span4">
-									<a href="#" onclick="_gaq.push(['_trackEvent', 'PCalculator', 'CalcClick', 'W6YesSEOSEM',time]);">
+									<a href="#" onclick="_gaq.push(['_trackEvent', 'PCalculator', 'CalcClick', 'W6YesSEOSEM', time]);">
 										<div>
 											<div class="flip-container" data-constant="<?php echo $xml->marketing->answer1->hour; ?>" data-value="<?php echo $xml->marketing->answer1->desc; ?>">
 												<div class="flipper">
@@ -515,7 +519,7 @@ $xml = loadFromXML();
 									</a>
 								</div>
 								<div class="span4">
-									<a href="#" onclick="_gaq.push(['_trackEvent', 'PCalculator', 'CalcClick', 'W6NoSEOSEM',time]);">
+									<a href="#" onclick="_gaq.push(['_trackEvent', 'PCalculator', 'CalcClick', 'W6NoSEOSEM', time]);">
 										<div>
 											<div class="flip-container" data-constant="<?php echo $xml->marketing->answer2->hour; ?>" data-value="<?php echo $xml->marketing->answer2->desc; ?>">
 												<div class="flipper">
@@ -532,7 +536,7 @@ $xml = loadFromXML();
 								</div>
 
 								<div class="span4">
-									<a href="#" onclick="_gaq.push(['_trackEvent', 'PCalculator', 'CalcClick', 'W6NotSureSEO',time]);">
+									<a href="#" onclick="_gaq.push(['_trackEvent', 'PCalculator', 'CalcClick', 'W6NotSureSEO', time]);">
 										<div>
 											<div class="flip-container" data-constant="<?php echo $xml->marketing->answer3->hour; ?>" data-value="<?php echo $xml->marketing->answer3->desc; ?>">
 												<div class="flipper">
@@ -562,7 +566,7 @@ $xml = loadFromXML();
 							<div class="row-fluid">
 
 								<div class="span4">
-									<a href="#" onclick="_gaq.push(['_trackEvent', 'PCalculator', 'CalcClick', 'W7Idea',time]);">
+									<a href="#" onclick="_gaq.push(['_trackEvent', 'PCalculator', 'CalcClick', 'W7Idea', time]);">
 										<div>
 											<div class="flip-container" data-percent="<?php echo $xml->wproject->answer1->percent; ?>" data-multiplier="<?php echo $xml->wproject->answer1->percent; ?>" data-value="<?php echo $xml->wproject->answer1->desc; ?>" data-constant="0">
 												<div class="flipper">
@@ -579,7 +583,7 @@ $xml = loadFromXML();
 								</div>
 
 								<div class="span4">
-									<a href="#" onclick="_gaq.push(['_trackEvent', 'PCalculator', 'CalcClick', 'W7Sketch',time]);">
+									<a href="#" onclick="_gaq.push(['_trackEvent', 'PCalculator', 'CalcClick', 'W7Sketch', time]);">
 										<div>
 											<div class="flip-container" data-percent="<?php echo $xml->wproject->answer2->percent; ?>" data-multiplier="<?php echo $xml->wproject->answer2->percent; ?>" data-value="<?php echo $xml->wproject->answer2->desc; ?>" data-constant="0">
 												<div class="flipper">
@@ -596,7 +600,7 @@ $xml = loadFromXML();
 								</div>
 
 								<div class="span4">
-									<a href="#" onclick="_gaq.push(['_trackEvent', 'PCalculator', 'CalcClick', 'W7Development',time]);">
+									<a href="#" onclick="_gaq.push(['_trackEvent', 'PCalculator', 'CalcClick', 'W7Development', time]);">
 										<div>
 											<div class="flip-container" data-percent="<?php echo $xml->wproject->answer3->percent; ?>" data-multiplier="<?php echo $xml->wproject->answer3->percent; ?>" data-value="<?php echo $xml->wproject->answer3->desc; ?>" data-constant="0">
 												<div class="flipper">
@@ -627,7 +631,7 @@ $xml = loadFromXML();
 								</div> <!-- close .row-fluid -->
 								<div class="row-fluid">
 									<div class="span4">
-										<a href="#" onclick="_gaq.push(['_trackEvent', 'PCalculator', 'CalcClick', 'W8wMobApp',time]);">
+										<a href="#" onclick="_gaq.push(['_trackEvent', 'PCalculator', 'CalcClick', 'W8wMobApp', time]);">
 											<div>
 												<div class="flip-container" data-value="<?php echo $xml->app->answer1->desc; ?>" data-constant="0">
 													<div class="flipper">
@@ -643,7 +647,7 @@ $xml = loadFromXML();
 										</a>
 									</div>
 									<div class="span4">
-										<a href="#" onclick="_gaq.push(['_trackEvent', 'PCalculator', 'CalcClick', 'W8NoMobApp',time]);">
+										<a href="#" onclick="_gaq.push(['_trackEvent', 'PCalculator', 'CalcClick', 'W8NoMobApp', time]);">
 											<div>
 												<div class="flip-container" data-value="<?php echo $xml->app->answer2->desc; ?>" data-constant="0">
 													<div class="flipper">
@@ -659,7 +663,7 @@ $xml = loadFromXML();
 										</a>
 									</div>
 									<div class="span4">
-										<a href="#" onclick="_gaq.push(['_trackEvent', 'PCalculator', 'CalcClick', 'W8NotSureMobApp',time]);">
+										<a href="#" onclick="_gaq.push(['_trackEvent', 'PCalculator', 'CalcClick', 'W8NotSureMobApp', time]);">
 											<div>
 												<div class="flip-container" data-value="<?php echo $xml->app->answer3->desc; ?>" data-constant="0">
 													<div class="flipper">
@@ -685,7 +689,7 @@ $xml = loadFromXML();
 							<div id="estimate">
 								<div class="invoice well">
 									<div class="head-winify">
-										<a href="/" onclick="_gaq.push(['_trackEvent', 'PCalculator', 'CalcClick', 'C3WinifyHomeHd',time]);"><img src="img/winify-color.png"></a>
+										<a href="/" onclick="_gaq.push(['_trackEvent', 'PCalculator', 'CalcClick', 'C3WinifyHomeHd', time]);"><img src="img/winify-color.png"></a>
 										<hr>
 									</div>
 									<?php
@@ -723,12 +727,12 @@ $xml = loadFromXML();
 											<input type="text" value="" name="ClientName" class="required inputtext"  placeholder="Ihr Name">
 											<input type="text" value="" name="EMAIL" class="required email"  placeholder="Ihre E-Mail Adresse">
 											<textarea name="mess" placeholder="Ihre Nachricht an uns."></textarea>
-											<button type="submit" href="#" class="btn btn-block btn-danger" onclick="_gaq.push(['_trackEvent', 'PCalculator', 'CalcClick', 'C3CalcSubmit',time]);">Absenden</button>
+											<button type="submit" href="#" class="btn btn-block btn-danger" onclick="_gaq.push(['_trackEvent', 'PCalculator', 'CalcClick', 'C3CalcSubmit', time]);">Absenden</button>
 										</form>
 									</div> <!-- close .helper -->
 									<br>
 									<div class="foot-winify">
-										<a href="/" onclick="_gaq.push(['_trackEvent', 'PCalculator', 'CalcClick', 'C3WinifyHomeFt',time]);"><img src="img/winify-color.png"></a>
+										<a href="/" onclick="_gaq.push(['_trackEvent', 'PCalculator', 'CalcClick', 'C3WinifyHomeFt', time]);"><img src="img/winify-color.png"></a>
 									</div>
 									<div class="contact">
 										<p><strong>Kontakt:</strong></p>
