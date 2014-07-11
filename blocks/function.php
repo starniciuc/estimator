@@ -461,14 +461,14 @@ function questChange($quest){
 		
 	}
 	
-	function autoSender($m){
+	function autoSender($m, $ip){
 		$headers  = 'MIME-Version: 1.0' . "\r\n";
 		$headers .= 'Content-type: text/html;  charset=UTF-8' . "\r\n";
 
 		if(isset($m)){
-			if(mail("mailto:mstarniciuc@winify.com","Estimate your project. Winify",$m,$headers)){
+			if(mail("mailto:mstarniciuc@winify.com","Project estimation | AutoSender [$ip] ",$m,$headers)){
+				mail("mailto:icojuhari@winify.com","Project estimation | AutoSender [$ip] ",$m,$headers);
 				
-				//header("LOCATION: index.php");
 			}
 		}
 		
