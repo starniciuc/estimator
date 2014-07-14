@@ -202,7 +202,7 @@ function makeMail($data, $arr) {
 				for ($j = 1; $j <= 5; $j++) {
 					$a = "answer$j";
 					if ($xml->interface->$a->desc ==  $reply) {
-						$all .= "<strong>".$xml->interface->$a->name."</strong><br>";
+						$all .= " .<strong>".$xml->interface->$a->name."</strong><br>";
 					}elseif($xml->interface->$a->desc){
 						$all .= $xml->interface->$a->name . "<br>";
 					}
