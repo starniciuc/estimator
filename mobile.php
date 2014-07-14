@@ -800,7 +800,7 @@ $xml = loadFromXML();
 								</div> <!-- close .row-fluid -->
 								<div class="row-fluid">
 									<div class="span4">
-										<a href="#" id="websiteProject" class='final-question' onclick="_gaq.push(['_trackEvent', 'PCalculator', 'CalcClick', 'M11wSite', time]);">
+										<a href="#" id="websiteProject" onclick="_gaq.push(['_trackEvent', 'PCalculator', 'CalcClick', 'M11wSite', time]);">
 											<div>
 												<div class="flip-container" data-value="<?php echo $xml->website->answer1->desc; ?>">
 													<div class="flipper">
