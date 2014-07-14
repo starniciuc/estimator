@@ -165,8 +165,8 @@ function makeMail($data, $arr) {
 				for ($j = 1; $j <= 5; $j++) {
 					$a = "answer$j";
 					if ($xml->device->$a->desc ==  $reply) {
-						$all .= $xml->device->$a->name . "<br>";
-					}elseif($xml->device->$a->desc & $xml->device->$a->desc !=null){
+						$all .= "<strong>".$xml->device->$a->name . "</strong><br>";
+					}elseif($xml->device->$a->desc){
 						$all .= $xml->device->$a->name . "<br>";
 					}
 				}
@@ -194,7 +194,7 @@ function makeMail($data, $arr) {
 						. "<td style='background-color:#efefef; border-bottom:1px dotted #aaa; padding:5px;'>" . $bg
 						. "&euro;</td>"
 						. "</tr><tr>" . "<td style='border-bottom:1px dotted #aaa; padding:5px;'>" . $xml->type->title . "</td>"
-						. "<td style='border-bottom:1px dotted #aaa; padding:5px;'><strong>". $all . "</td>"
+						. "<td style='border-bottom:1px dotted #aaa; padding:5px;'>". $all . "</td>"
 						. "</tr>";
 			}
 			if ($xml->interface->title == $title) {
@@ -344,7 +344,7 @@ function makeMail($data, $arr) {
 						. "$bg&euro;</td>"
 						. "</tr><tr>"
 						. "<td style='border-bottom:1px dotted #aaa; padding:5px;'>" . $xml->wtype->title . "</td>"
-						. "<td style='border-bottom:1px dotted #aaa; padding:5px;'><strong>" . $xml->wtype->$answer->name . "</strong><br>" . $all . "</td>"
+						. "<td style='border-bottom:1px dotted #aaa; padding:5px;'>". $all . "</td>"
 						. "</tr>";
 			}
 			if ($xml->based->title == $title) {
