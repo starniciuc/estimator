@@ -244,20 +244,7 @@ function makeMail($data, $arr) {
 						. "<td  style='border-bottom:1px dotted #aaa; padding:5px;'>" . $all . "</td>"
 						. "</tr>";
 			}
-			if($xml->interface->title == $title){
-				$all = " ";
-				for($j = 1; $j <= 5; $j++){
-					$a = "answer$j";
-					if($xml->interface->desc == $reply) {
-						$all .= "<strong>".$xml->interface->desc."</strong><br>";
-					}elseif($xml->interface->desc){
-						$all .= $xml->interface->desc."<br>";
-					}
-				}
-				$message .= "<tr><td>".$xml->interface->title
-						. "</td><td>".$all
-						. "</td></tr>";
-			}
+			
 			if ($xml->sync->title == $title) {
 				$all = "";
 				for ($j = 1; $j <= 5; $j++) {
@@ -455,6 +442,20 @@ function makeMail($data, $arr) {
 						. "<td  style='border-bottom:1px dotted #aaa; padding:5px;'>" . $xml->marketing->title . "</td>"
 						. "<td  style='border-bottom:1px dotted #aaa; padding:5px;'>" . $all . "</td>"
 						. "</tr>";
+			}
+			if($xml->interface->title == $title){
+				$all = " ";
+				for($j = 1; $j <= 5; $j++){
+					$a = "answer$j";
+					if($xml->interface->$a->desc == $reply) {
+						$all .= "<strong>".$xml->interface->$a->desc."</strong><br>";
+					}elseif($xml->interface->$a->desc){
+						$all .= $xml->interface->$a->desc."<br>";
+					}
+				}
+				$message .= "<tr><td>".$xml->interface->title
+						. "</td><td>".$all
+						. "</td></tr>";
 			}
 		}
 
