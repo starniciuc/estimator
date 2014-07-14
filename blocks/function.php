@@ -137,7 +137,6 @@ function makeMail($data, $arr) {
 	if (file_exists('quest.xml')) {
 		$xml = simplexml_load_file('quest.xml');
 
-		$quest = 'device';
 		$message = "<table style='border: none; border-collapse: collapse; color:#222; margin-bottom:30px; width:600px;'>"
 				. "<tr>"
 				. "<td style=' background-color:#efefef; border-bottom:1px solid #ccc; padding:5px; '><strong>Client info</strong></td>"
