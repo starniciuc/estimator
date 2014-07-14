@@ -181,8 +181,8 @@ function makeMail($data, $arr) {
 				for ($j = 1; $j <= 5; $j++) {
 					$a = "answer$j";
 					if ($xml->type->$a->desc ==  $reply) {
-						$all .= $xml->type->$a->name . "<br>";
-					}elseif($xml->type->$a->desc & $xml->type->$a->desc !=null){
+						$all .= "<strong>".$xml->type->$a->name . "</strong><br>";
+					}elseif($xml->type->$a->desc){
 						$all .= $xml->type->$a->name . "<br>";
 					}
 				}
@@ -202,8 +202,8 @@ function makeMail($data, $arr) {
 				for ($j = 1; $j <= 5; $j++) {
 					$a = "answer$j";
 					if ($xml->interface->$a->desc ==  $reply) {
-						$all .= $xml->interface->$a->name . "<br>";
-					}elseif($xml->interface->$a->desc & $xml->interface->$a->desc !=null){
+						$all .= "<strong>".$xml->interface->$a->name . "</strong><br>";
+					}elseif($xml->interface->$a->desc){
 						$all .= $xml->interface->$a->name . "<br>";
 					}
 				}
@@ -218,8 +218,8 @@ function makeMail($data, $arr) {
 				for ($j = 1; $j <= 5; $j++) {
 					$a = "answer$j";
 					if ($xml->payments->$a->desc ==  $reply) {
-						$all .= $xml->payments->$a->name . "<br>";
-					}elseif($xml->payments->$a->desc & $xml->payments->$a->desc !=null){
+						$all .= "<strong>".$xml->payments->$a->name . "</strong><br>";
+					}elseif($xml->payments->$a->desc){
 						$all .= $xml->payments->$a->name . "<br>";
 					}
 				}
@@ -234,8 +234,8 @@ function makeMail($data, $arr) {
 				for ($j = 1; $j <= 5; $j++) {
 					$a = "answer$j";
 					if ($xml->login->$a->desc ==  $reply) {
-						$all .= $xml->login->$a->name . "<br>";
-					}elseif($xml->login->$a->desc & $xml->login->$a->desc !=null){
+						$all .= "<strong>".$xml->login->$a->name . "</strong><br>";
+					}elseif($xml->login->$a->desc){
 						$all .= $xml->login->$a->name . "<br>";
 					}
 				}
@@ -250,8 +250,8 @@ function makeMail($data, $arr) {
 				for ($j = 1; $j <= 5; $j++) {
 					$a = "answer$j";
 					if ($xml->sync->$a->desc ==  $reply) {
-						$all .= $xml->sync->$a->name . "<br>";
-					}elseif($xml->sync->$a->desc & $xml->sync->$a->desc !=null){
+						$all .= "<strong>".$xml->sync->$a->name . "</strong><br>";
+					}elseif($xml->sync->$a->desc){
 						$all .= $xml->sync->$a->name . "<br>";
 					}
 				}
@@ -266,8 +266,8 @@ function makeMail($data, $arr) {
 				for ($j = 1; $j <= 5; $j++) {
 					$a = "answer$j";
 					if ($xml->rate->$a->desc ==  $reply) {
-						$all .= $xml->rate->$a->name . "<br>";
-					}elseif($xml->rate->$a->desc & $xml->rate->$a->desc !=null){
+						$all .= "<strong>".$xml->rate->$a->name . "</strong><br>";
+					}elseif($xml->rate->$a->desc){
 						$all .= $xml->rate->$a->name . "<br>";
 					}
 				}
@@ -282,8 +282,8 @@ function makeMail($data, $arr) {
 				for ($j = 1; $j <= 5; $j++) {
 					$a = "answer$j";
 					if ($xml->graphics->$a->desc ==  $reply) {
-						$all .= $xml->graphics->$a->name . "<br>";
-					}elseif($xml->graphics->$a->desc & $xml->graphics->$a->desc !=null){
+						$all .= "<strong>".$xml->graphics->$a->name . "</strong><br>";
+					}elseif($xml->graphics->$a->desc){
 						$all .= $xml->graphics->$a->name . "<br>";
 					}
 				}
@@ -298,8 +298,8 @@ function makeMail($data, $arr) {
 				for ($j = 1; $j <= 5; $j++) {
 					$a = "answer$j";
 					if ($xml->profiles->$a->desc ==  $reply) {
-						$all .= $xml->profiles->$a->name . "<br>";
-					}elseif($xml->profiles->$a->desc & $xml->device->$a->desc !=null){
+						$all .= "<strong>".$xml->profiles->$a->name . "</strong><br>";
+					}elseif($xml->profiles->$a->desc){
 						$all .= $xml->profiles->$a->name . "<br>";
 					}
 				}
@@ -314,8 +314,8 @@ function makeMail($data, $arr) {
 				for ($j = 1; $j <= 5; $j++) {
 					$a = "answer$j";
 					if ($xml->project->$a->desc ==  $reply) {
-						$all .= $xml->project->$a->name . "<br>";
-					}elseif($xml->project->$a->desc & $xml->device->$a->desc !=null){
+						$all .= "<strong>".$xml->project->$a->name . "</strong><br>";
+					}elseif($xml->project->$a->desc){
 						$all .= $xml->project->$a->name . "<br>";
 					}
 				}
@@ -330,8 +330,8 @@ function makeMail($data, $arr) {
 				for ($j = 1; $j <= 5; $j++) {
 					$a = "answer$j";
 					if ($xml->wtype->$a->desc ==  $reply) {
-						$all .= $xml->wtype->$a->name . "<br>";
-					}elseif($xml->wtype->$a->desc & $xml->wtype->$a->desc !=null){
+						$all .= "<strong>".$xml->wtype->$a->name . "</strong><br>";
+					}elseif($xml->wtype->$a->desc){
 						$all .= $xml->wtype->$a->name . "<br>";
 					}
 				}
@@ -352,8 +352,8 @@ function makeMail($data, $arr) {
 				for ($j = 1; $j <= 5; $j++) {
 					$a = "answer$j";
 					if ($xml->based->$a->desc ==  $reply) {
-						$all .= $xml->based->$a->name . "<br>";
-					}elseif($xml->based->$a->desc & $xml->based->$a->desc !=null){
+						$all .= "<strong>".$xml->based->$a->name . "</strong><br>";
+					}elseif($xml->based->$a->desc){
 						$all .= $xml->based->$a->name . "<br>";
 					}
 				}
@@ -368,8 +368,8 @@ function makeMail($data, $arr) {
 				for ($j = 1; $j <= 5; $j++) {
 					$a = "answer$j";
 					if ($xml->languages->$a->desc ==  $reply) {
-						$all .= $xml->languages->$a->name . "<br>";
-					}elseif($xml->languages->$a->desc & $xml->device->$a->desc !=null){
+						$all .= "<strong>".$xml->languages->$a->name . "</strong><br>";
+					}elseif($xml->languages->$a->desc){
 						$all .= $xml->languages->$a->name . "<br>";
 					}
 				}
@@ -384,8 +384,8 @@ function makeMail($data, $arr) {
 				for ($j = 1; $j <= 5; $j++) {
 					$a = "answer$j";
 					if ($xml->responsive->$a->desc ==  $reply) {
-						$all .= $xml->responsive->$a->name . "<br>";
-					}elseif($xml->responsive->$a->desc & $xml->device->$a->desc !=null){
+						$all .= "<strong>".$xml->responsive->$a->name . "</strong><br>";
+					}elseif($xml->responsive->$a->desc){
 						$all .= $xml->responsive->$a->name . "<br>";
 					}
 				}
@@ -400,8 +400,8 @@ function makeMail($data, $arr) {
 				for ($j = 1; $j <= 5; $j++) {
 					$a = "answer$j";
 					if ($xml->design->$a->desc ==  $reply) {
-						$all .= $xml->design->$a->name . "<br>";
-					}elseif($xml->design->$a->desc & $xml->design->$a->desc !=null){
+						$all .= "<strong>".$xml->design->$a->name . "</strong><br>";
+					}elseif($xml->design->$a->desc){
 						$all .= $xml->design->$a->name . "<br>";
 					}
 				}
@@ -416,8 +416,8 @@ function makeMail($data, $arr) {
 				for ($j = 1; $j <= 5; $j++) {
 					$a = "answer$j";
 					if ($xml->marketing->$a->desc ==  $reply) {
-						$all .= $xml->marketing->$a->name . "<br>";
-					}elseif($xml->marketing->$a->desc & $xml->marketing->$a->desc !=null){
+						$all .= "<strong>".$xml->marketing->$a->name . "</strong><br>";
+					}elseif($xml->marketing->$a->desc){
 						$all .= $xml->marketing->$a->name . "<br>";
 					}
 				}
