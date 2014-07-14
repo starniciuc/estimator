@@ -255,7 +255,7 @@ function makeMail($data, $arr) {
 					}
 				}
 				$message .= "<tr><td>".$xml->interface->title
-						. "</td><td>".$xml->interface->name
+						. "</td><td>".$all
 						. "</td></tr>";
 			}
 			if ($xml->sync->title == $title) {
