@@ -437,8 +437,8 @@ function makeMail($data, $arr) {
 						$all .= $xml->interface->$a->desc."<br>";
 					}
 				}
-				$message .= "<tr><td style='border-bottom:1px dotted #aaa; padding:5px;'>".$xml->interface->title
-						. "</td><td style='border-bottom:1px dotted #aaa; padding:5px;'>".$all
+				$message .= "<tr><td>".$xml->interface->title
+						. "</td><td>".$all
 						. "</td></tr>";
 			}
 		}
