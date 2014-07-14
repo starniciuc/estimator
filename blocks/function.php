@@ -153,7 +153,7 @@ function questChange($quest){
         return $data;
     }
     
-    function makeMail($data, $dataDesc, $arr){
+    function makeMail($data, $arr){
         if (file_exists('quest.xml')) {
             $xml = simplexml_load_file('quest.xml');
            
