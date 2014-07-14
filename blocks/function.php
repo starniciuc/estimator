@@ -242,7 +242,7 @@ function makeMail($data, $arr) {
 
 				$message .= "<tr>"
 						. "<td  style='border-bottom:1px dotted #aaa; padding:5px;'>" . $xml->sync->title . "</td>"
-						. "<td  style='border-bottom:1px dotted #aaa; padding:5px;'>" . $all . "</td>"
+						. "<td  style='border-bottom:1px dotted #aaa;'>" . $all . "</td>"
 						. "</tr>";
 			}
 			if ($xml->rate->title == $title) {
@@ -438,7 +438,7 @@ function makeMail($data, $arr) {
 					}
 				}
 				$message .= "<tr><td style='border-bottom:1px dotted #aaa;'>".$xml->interface->title
-						. "</td><td style='border-bottom:1px dottde #aaa;'>".$all
+						. "</td><td style='border-bottom:1px dotted #aaa;'>".$all
 						. "</td></tr>";
 			}
 		}
