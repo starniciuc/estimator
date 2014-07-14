@@ -289,7 +289,7 @@ function makeMail($data, $arr) {
 				}
 
 				$message .= "<tr>"
-						. "<td  style='border-bottom:1px dotted #aaa; padding:5px;'>" . $xml->device->title . "</td>"
+						. "<td  style='border-bottom:1px dotted #aaa; padding:5px;'>" . $xml->graphics->title . "</td>"
 						. "<td  style='border-bottom:1px dotted #aaa; padding:5px;'>" . $all . "</td>"
 						. "</tr>";
 			}
@@ -306,6 +306,22 @@ function makeMail($data, $arr) {
 
 				$message .= "<tr>"
 						. "<td  style='border-bottom:1px dotted #aaa; padding:5px;'>" . $xml->profiles->title . "</td>"
+						. "<td  style='border-bottom:1px dotted #aaa; padding:5px;'>" . $all . "</td>"
+						. "</tr>";
+			}
+			if ($xml->website->title == $title) {
+				$all = "";
+				for ($j = 1; $j <= 5; $j++) {
+					$a = "answer$j";
+					if ($xml->website->$a->desc ==  $reply) {
+						$all .= "<strong>".$xml->website->$a->name . "</strong><br>";
+					}elseif($xml->website->$a->desc){
+						$all .= $xml->website->$a->name . "<br>";
+					}
+				}
+
+				$message .= "<tr>"
+						. "<td  style='border-bottom:1px dotted #aaa; padding:5px;'>" . $xml->website->title . "</td>"
 						. "<td  style='border-bottom:1px dotted #aaa; padding:5px;'>" . $all . "</td>"
 						. "</tr>";
 			}
