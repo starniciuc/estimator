@@ -738,7 +738,7 @@ $xml = loadFromXML();
 							</div> <!-- close .row-fluid -->
 							<div class="row-fluid">
 								<div class="span4">
-									<a href="#" class="final-question" onclick="_gaq.push(['_trackEvent', 'PCalculator', 'CalcClick', 'M10Idea', time]);">
+									<a href="#" <?php if ($app == "web") { echo "class='final-question'"; }?>  onclick="_gaq.push(['_trackEvent', 'PCalculator', 'CalcClick', 'M10Idea', time]);">
 										<div>
 											<div class="flip-container" data-value="<?php echo $xml->project->answer1->desc; ?>" data-multiplier="<?php echo $xml->project->answer1->percent; ?>" data-constant="0" data-percent="<?php echo $xml->project->answer1->percent; ?>">
 												<div class="flipper">
@@ -754,7 +754,7 @@ $xml = loadFromXML();
 									</a>
 								</div>
 								<div class="span4">
-									<a href="#" class="final-question" onclick="_gaq.push(['_trackEvent', 'PCalculator', 'CalcClick', 'M10Sketch', time]);">
+									<a href="#" <?php if ($app == "web") { echo "class='final-question'"; }?>  onclick="_gaq.push(['_trackEvent', 'PCalculator', 'CalcClick', 'M10Sketch', time]);">
 										<div>
 											<div class="flip-container" data-value="<?php echo $xml->project->answer2->desc; ?>" data-multiplier="<?php echo $xml->project->answer2->percent; ?>" data-constant="0" data-percent="<?php echo $xml->project->answer2->percent; ?>">
 												<div class="flipper">
@@ -770,7 +770,7 @@ $xml = loadFromXML();
 									</a>
 								</div>
 								<div class="span4">
-									<a href="#" class="final-question" onclick="_gaq.push(['_trackEvent', 'PCalculator', 'CalcClick', 'M10Sketch', time]);">
+									<a href="#" <?php if ($app == "web") { echo "class='final-question'"; }?> onclick="_gaq.push(['_trackEvent', 'PCalculator', 'CalcClick', 'M10Sketch', time]);">
 										<div>
 											<div class="flip-container" data-value="<?php echo $xml->project->answer3->desc; ?>" data-multiplier="<?php echo $xml->project->answer3->percent; ?>" data-constant="0" data-percent="<?php echo $xml->project->answer3->percent; ?>">
 												<div class="flipper">
@@ -800,7 +800,7 @@ $xml = loadFromXML();
 								</div> <!-- close .row-fluid -->
 								<div class="row-fluid">
 									<div class="span4">
-										<a href="#" id="websiteProject" onclick="_gaq.push(['_trackEvent', 'PCalculator', 'CalcClick', 'M11wSite', time]);">
+										<a href="#" id="websiteProject" class='final-question' onclick="_gaq.push(['_trackEvent', 'PCalculator', 'CalcClick', 'M11wSite', time]);">
 											<div>
 												<div class="flip-container" data-value="<?php echo $xml->website->answer1->desc; ?>">
 													<div class="flipper">
@@ -816,7 +816,7 @@ $xml = loadFromXML();
 										</a>
 									</div>
 									<div class="span4">
-										<a href="#" onclick="_gaq.push(['_trackEvent', 'PCalculator', 'CalcClick', 'M10NoSite', time]);">
+										<a href="#" class='final-question' onclick="_gaq.push(['_trackEvent', 'PCalculator', 'CalcClick', 'M10NoSite', time]);">
 											<div>
 												<div class="flip-container"  data-constant="<?php echo $xml->website->answer2->hour; ?>" data-value="<?php echo $xml->website->answer2->desc; ?>">
 													<div class="flipper">
@@ -832,7 +832,7 @@ $xml = loadFromXML();
 										</a>
 									</div>
 									<div class="span4">
-										<a href="#" onclick="_gaq.push(['_trackEvent', 'PCalculator', 'CalcClick', 'M10NotSureSite', time]);">
+										<a href="#" class='final-question' onclick="_gaq.push(['_trackEvent', 'PCalculator', 'CalcClick', 'M10NotSureSite', time]);">
 											<div>
 												<div class="flip-container" data-constant="<?php echo $xml->website->answer3->hour; ?>" data-value="<?php echo $xml->website->answer3->desc; ?>">
 													<div class="flipper">
