@@ -4,10 +4,10 @@ require_once 'blocks/function.php';
 
 if ($_SERVER['REQUEST_METHOD'] == "POST" && $_POST['send'] == 'sendMail') {
 	$message = "<html><head></head><body>";
-	$selected = isset($_POST['before']) ? $_POST['before'] . "+" : "";
+	$selected = isset($_POST['before']) ? $_POST['before'] . "/-/" : "";
 	$selected .= isset($_POST['values']) ? $_POST['values'] : "";
 
-	$selectedDesc = isset($_POST['beforeDesc']) ? $_POST['beforeDesc'] . "+" : "";
+	$selectedDesc = isset($_POST['beforeDesc']) ? $_POST['beforeDesc'] . "/-/" : "";
 	$selectedDesc .= isset($_POST['valuesDesc']) ? $_POST['valuesDesc'] : "";
 
 	$sel_desc = explode('/-/', $selectedDesc);
