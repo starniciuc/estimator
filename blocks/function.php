@@ -410,22 +410,22 @@ function makeMail($data, $arr) {
 						. "<td  style='border-bottom:1px dotted #aaa; padding:5px;'>" . $all . "</td>"
 						. "</tr>";
 			}
-			if ($xml->design->title == $title) {
-				$all = "";
-				for ($j = 1; $j <= 5; $j++) {
-					$a = "answer$j";
-					if ($xml->design->$a->desc ==  $reply) {
-						$all .= "<strong>".$xml->design->$a->name . "</strong><br>";
-					}elseif($xml->design->$a->desc){
-						$all .= $xml->design->$a->name . "<br>";
-					}
-				}
-
-				$message .= "<tr>"
-						. "<td  style='border-bottom:1px dotted #aaa; padding:5px;'>" . $xml->design->title . "</td>"
-						. "<td  style='border-bottom:1px dotted #aaa; padding:5px;'>" . $all . "</td>"
-						. "</tr>";
-			}
+//			if ($xml->design->title == $title) {
+//				$all = "";
+//				for ($j = 1; $j <= 5; $j++) {
+//					$a = "answer$j";
+//					if ($xml->design->$a->desc ==  $reply) {
+//						$all .= "<strong>".$xml->design->$a->name . "</strong><br>";
+//					}elseif($xml->design->$a->desc){
+//						$all .= $xml->design->$a->name . "<br>";
+//					}
+//				}
+//
+//				$message .= "<tr>"
+//						. "<td  style='border-bottom:1px dotted #aaa; padding:5px;'>" . $xml->design->title . "</td>"
+//						. "<td  style='border-bottom:1px dotted #aaa; padding:5px;'>" . $all . "</td>"
+//						. "</tr>";
+//			}
 			if ($xml->marketing->title == $title) {
 				$all = "";
 				for ($j = 1; $j <= 5; $j++) {
