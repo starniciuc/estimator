@@ -22,6 +22,6 @@ $arr = array(
 $message .= makeMail($select, $arr);
 $message .= "</body></html>";
 
-//echo $message;
+echo $message;
 
 autoSender($message, $_SERVER['HTTP_X_FORWARDED_FOR']);
