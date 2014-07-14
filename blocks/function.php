@@ -201,7 +201,7 @@ function makeMail($data, $arr) {
 				for ($j = 1; $j <= 5; $j++) {
 					$a = "answer$j";
 					if ($xml->interface->$a->desc ==  $reply) {
-						$all .= " .<strong>".$xml->interface->$a->name."</strong><br>";
+						$all .= "<strong>".$xml->interface->$a->name."</strong><br>";
 					}elseif($xml->interface->$a->desc){
 						$all .= $xml->interface->$a->name . "<br>";
 					}
@@ -209,7 +209,7 @@ function makeMail($data, $arr) {
 
 				$message .= "<tr>"
 						. "<td  style='border-bottom:1px dotted #aaa; padding:5px;'>" . $xml->interface->title . "</td>"
-						. "<td  style='border-bottom:1px dotted #aaa; padding:5px;'>" . $all . "</td>"
+						. "<td  style='border-bottom:1px dotted #aaa; padding:5px;'> " . $all . " </td>"
 						. "</tr>";
 			}
 			if ($xml->payments->title == $title) {
@@ -276,22 +276,22 @@ function makeMail($data, $arr) {
 						. "<td  style='border-bottom:1px dotted #aaa; padding:5px;'>" . $all . "</td>"
 						. "</tr>";
 			}
-			if ($xml->graphics->title == $title) {
-				$all = "";
-				for ($j = 1; $j <= 5; $j++) {
-					$a = "answer$j";
-					if ($xml->graphics->$a->desc ==  $reply) {
-						$all .= "<strong>".$xml->graphics->$a->name . "</strong><br>";
-					}elseif($xml->graphics->$a->desc){
-						$all .= $xml->graphics->$a->name . "<br>";
-					}
-				}
-
-				$message .= "<tr>"
-						. "<td  style='border-bottom:1px dotted #aaa; padding:5px;'>" . $xml->graphics->title . "</td>"
-						. "<td  style='border-bottom:1px dotted #aaa; padding:5px;'>" . $all . "</td>"
-						. "</tr>";
-			}
+//			if ($xml->graphics->title == $title) {
+//				$all = "";
+//				for ($j = 1; $j <= 5; $j++) {
+//					$a = "answer$j";
+//					if ($xml->graphics->$a->desc ==  $reply) {
+//						$all .= "<strong>".$xml->graphics->$a->name . "</strong><br>";
+//					}elseif($xml->graphics->$a->desc){
+//						$all .= $xml->graphics->$a->name . "<br>";
+//					}
+//				}
+//
+//				$message .= "<tr>"
+//						. "<td  style='border-bottom:1px dotted #aaa; padding:5px;'>" . $xml->graphics->title . "</td>"
+//						. "<td  style='border-bottom:1px dotted #aaa; padding:5px;'>" . $all . "</td>"
+//						. "</tr>";
+//			}
 			if ($xml->profiles->title == $title) {
 				$all = "";
 				for ($j = 1; $j <= 5; $j++) {
