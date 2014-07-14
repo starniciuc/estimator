@@ -723,6 +723,7 @@ $xml = loadFromXML();
 										<form action="" method="post" id="submitForm" onsubmit='return false;' name="mc-embedded-subscribe-form" class="validate subscribe-form">
 											<?php echo isset($_POST['features']) ? "<input type='hidden' name='before' value='$_POST[type]+$_POST[features]'>" : ""; ?>
 											<?php echo isset($_POST['features']) ? "<input type='hidden' name='obudget' value='$_POST[budget]'>" : ""; ?>
+											<?php echo isset($_POST['features']) ? "<input type='hidden' name='beforeDesc' value='$_POST[description]+$_POST[descriptions]'>" : ""; ?>
 											<input type="hidden" value="sendMail" name="send">
 											<input type="text" value="" name="ClientName" class="required inputtext"  placeholder="Ihr Name">
 											<input type="text" value="" name="EMAIL" class="required email"  placeholder="Ihre E-Mail Adresse">

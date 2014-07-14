@@ -12,6 +12,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" && $_POST['send'] == 'sendMail') {
 
 	$sel_desc = explode('/-/', $selectedDesc);
 	$sel = explode('/-/', $selected);
+		
 	$select = array_combine($sel_desc, $sel);
 	
 	$arr = array(
