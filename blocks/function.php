@@ -180,8 +180,7 @@ function questChange($quest){
 			
             foreach($data as $title => $reply )
             {
-				$message .= "<tr><td>$title</td><td>$reply</td></tr>";
-                /*for($i=1; $i<=5;$i++){
+                for($i=1; $i<=5;$i++){
 
                     $answer = "answer$i";
 					
@@ -441,7 +440,7 @@ function questChange($quest){
                     . "</tr>";
                     } 
                 }//for end
-                * */
+                
             }
 					
             $message .= "</table>";
