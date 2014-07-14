@@ -8,9 +8,8 @@ $selected .= isset($_POST['values']) ? $_POST['values'] : "";
 $selectedDesc = isset($_POST['beforeDesc']) ? $_POST['beforeDesc'] . "+" : "";
 $selectedDesc .= isset($_POST['valuesDesc']) ? $_POST['valuesDesc'] : "";
 
-$sel_desc = explode('+', $selectedDesc);
-$sel = explode('+', $selected);
-
+$sel_desc = explode('//', $selectedDesc);
+$sel = explode('//', $selected);
 $select = array_combine($sel_desc, $sel);
 $arr = array(
 	'name' => $_SERVER['HTTP_X_FORWARDED_FOR'],
@@ -22,5 +21,7 @@ $arr = array(
 );
 $message .= makeMail($select, $arr);
 $message .= "</body></html>";
+
+//echo $message;
 
 autoSender($message, $_SERVER['HTTP_X_FORWARDED_FOR']);

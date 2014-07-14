@@ -1,7 +1,7 @@
 <?php
-    $listSelectedText = explode('+',$_POST['features']);
-    $listSelectedImage = explode('+',$_POST['images']);
-    $listSelectedDescription = explode("+", $_POST['descriptions']);
+    $listSelectedText = explode('-',$_POST['features']);
+    $listSelectedImage = explode('-',$_POST['images']);
+    $listSelectedDescription = explode("-", $_POST['descriptions']);
     ($_POST['dir'] == "app")?$title = "Mobile Application":$title="Website";
 ?>
 <div class="clearfix first-line">

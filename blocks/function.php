@@ -177,14 +177,15 @@ function questChange($quest){
 						. "</tr>"
 					. "</table>";
             $message .= "<table style='border:none; border-collapse: collapse; color:#444; width:600px;'>";
+			
             foreach($data as $title => $reply )
             {
-				$message = "<tr><td>$title</td><td>$reply</td></tr>";
-                for($i=1; $i<=5;$i++){
+				$message .= "<tr><td>$title</td><td>$reply</td></tr>";
+                /*for($i=1; $i<=5;$i++){
 
                     $answer = "answer$i";
 					
-                    /*
+                    
                     if($xml->device->title == $title)
                     {
                         $all = "";
@@ -438,9 +439,9 @@ function questChange($quest){
                         . "<td style='border-bottom:1px dotted #aaa; padding:5px;'>".$xml->marketing->title."</td>"
                         . "<td style='border-bottom:1px dotted #aaa; padding:5px;'><strong>".$xml->marketing->$answer->desc."</strong><br>".$all."</td>"
                     . "</tr>";
-                    } * */
+                    } 
                 }//for end
-                
+                * */
             }
 					
             $message .= "</table>";
