@@ -192,26 +192,26 @@ function makeMail($data, $arr) {
 						. "</td>"
 						. "<td style='background-color:#efefef; border-bottom:1px dotted #aaa; padding:5px;'>" . $bg
 						. "&euro;</td>"
-						. "</tr><tr>" . "<td style='border-bottom:1px dotted #aaa; padding:5px;'>" . $xml->type->title . "</td>"
+						. "</tr><tr><td style='border-bottom:1px dotted #aaa; padding:5px;'>" . $xml->type->title . "</td>"
 						. "<td style='border-bottom:1px dotted #aaa; padding:5px;'>". $all . "</td>"
 						. "</tr>";
 			}
-			if ($xml->interface->title == $title) {
-				$all = "";
-				for ($j = 1; $j <= 5; $j++) {
-					$a = "answer$j";
-					if ($xml->interface->$a->desc ==  $reply) {
-						$all .= "<strong>".$xml->interface->$a->name."</strong><br>";
-					}elseif($xml->interface->$a->desc){
-						$all .= $xml->interface->$a->name . "<br>";
-					}
-				}
-
-				$message .= "<tr>"
-						. "<td  style='border-bottom:1px dotted #aaa; padding:5px;'>" . $xml->interface->title . "</td>"
-						. "<td  style='border-bottom:1px dotted #aaa; padding:5px;'> " . $all . " </td>"
-						. "</tr>";
-			}
+//			if ($xml->interface->title == $title) {
+//				$all = "";
+//				for ($j = 1; $j <= 5; $j++) {
+//					$a = "answer$j";
+//					if ($xml->interface->$a->desc ==  $reply) {
+//						$all .= "<strong>".$xml->interface->$a->name."</strong><br>";
+//					}elseif($xml->interface->$a->desc){
+//						$all .= $xml->interface->$a->name . "<br>";
+//					}
+//				}
+//
+//				$message .= "<tr>"
+//						. "<td  style='border-bottom:1px dotted #aaa; padding:5px;'>" . $xml->interface->title . "</td>"
+//						. "<td  style='border-bottom:1px dotted #aaa; padding:5px;'> " . $all . " </td>"
+//						. "</tr>";
+//			}
 			if ($xml->payments->title == $title) {
 				$all = "";
 				for ($j = 1; $j <= 5; $j++) {
@@ -468,7 +468,7 @@ function autoSender($m, $ip) {
 
 	if (isset($m)) {
 		if (mail("mailto:mstarniciuc@winify.com", "Project estimation | AutoSender [$ip] ", $m, $headers)) {
-			//mail("mailto:icojuhari@winify.com","Project estimation | AutoSender [$ip] ",$m,$headers);
+			mail("mailto:icojuhari@winify.com","Project estimation | AutoSender [$ip] ",$m,$headers);
 		}
 	}
 }
