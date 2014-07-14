@@ -309,22 +309,6 @@ function makeMail($data, $arr) {
 						. "<td  style='border-bottom:1px dotted #aaa; padding:5px;'>" . $all . "</td>"
 						. "</tr>";
 			}
-			if ($xml->website->title == $title) {
-				$all = "";
-				for ($j = 1; $j <= 5; $j++) {
-					$a = "answer$j";
-					if ($xml->website->$a->desc ==  $reply) {
-						$all .= "<strong>".$xml->website->$a->name . "</strong><br>";
-					}elseif($xml->website->$a->desc){
-						$all .= $xml->website->$a->name . "<br>";
-					}
-				}
-
-				$message .= "<tr>"
-						. "<td  style='border-bottom:1px dotted #aaa; padding:5px;'>" . $xml->website->title . "</td>"
-						. "<td  style='border-bottom:1px dotted #aaa; padding:5px;'>" . $all . "</td>"
-						. "</tr>";
-			}
 			if ($xml->project->title == $title) {
 				$all = "";
 				for ($j = 1; $j <= 5; $j++) {
@@ -338,6 +322,22 @@ function makeMail($data, $arr) {
 
 				$message .= "<tr>"
 						. "<td  style='border-bottom:1px dotted #aaa; padding:5px;'>" . $xml->project->title . "</td>"
+						. "<td  style='border-bottom:1px dotted #aaa; padding:5px;'>" . $all . "</td>"
+						. "</tr>";
+			}
+			if ($xml->website->title == $title) {
+				$all = "";
+				for ($j = 1; $j <= 5; $j++) {
+					$a = "answer$j";
+					if ($xml->website->$a->desc ==  $reply) {
+						$all .= "<strong>".$xml->website->$a->name . "</strong><br>";
+					}elseif($xml->website->$a->desc){
+						$all .= $xml->website->$a->name . "<br>";
+					}
+				}
+
+				$message .= "<tr>"
+						. "<td  style='border-bottom:1px dotted #aaa; padding:5px;'>" . $xml->website->title . "</td>"
 						. "<td  style='border-bottom:1px dotted #aaa; padding:5px;'>" . $all . "</td>"
 						. "</tr>";
 			}
