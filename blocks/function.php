@@ -179,11 +179,13 @@ function questChange($quest){
             $message .= "<table style='border:none; border-collapse: collapse; color:#444; width:600px;'>";
             foreach($data as $title => $reply )
             {
+				$message = "<tr><td>$title</td><td>$reply</td></tr>";
                 for($i=1; $i<=5;$i++){
 
                     $answer = "answer$i";
-                    
-                    if(($xml->device->$answer->desc == $title))
+					
+                    /*
+                    if($xml->device->title == $title)
                     {
                         $all = "";
                        for($j=1; $j<=5; $j++){
@@ -199,7 +201,7 @@ function questChange($quest){
                         . "<td  style='border-bottom:1px dotted #aaa; padding:5px;'><strong>".$xml->device->$answer->name."</strong><br>".$all."</td>"
                     . "</tr>";
                     }
-                    if(($xml->type->description == $title))
+                    if($xml->type->title == $title)
                     {
                          $all = "";
                        for($j=1; $j<=5; $j++){
@@ -220,7 +222,7 @@ function questChange($quest){
                         . "<td style='border-bottom:1px dotted #aaa; padding:5px;'><strong>".$xml->type->$answer->name."</strong><br>".$all."</td>"
                     . "</tr>";
                     }
-                    if(($xml->interface->description == $title))
+                    if($xml->interface->title == $title)
                     {
                          $all = "";
                        for($j=1; $j<=5; $j++){
@@ -235,7 +237,7 @@ function questChange($quest){
                         . "<td style='border-bottom:1px dotted #aaa; padding:5px;'><strong>".$xml->interface->$answer->name."</strong><br>".$all."</td>"
                     . "</tr>";
                     }
-                    if(($xml->payments->description == $title))
+                    if($xml->payments->title == $title)
                     {
                          $all = "";
                        for($j=1; $j<=5; $j++){
@@ -250,7 +252,7 @@ function questChange($quest){
                         . "<td style='border-bottom:1px dotted #aaa; padding:5px;'><strong>".$xml->payments->$answer->name."</strong><br>".$all."</td>"
                     . "</tr>";
                     }
-                    if(($xml->login->description == $title ))
+                    if($xml->login->title == $title)
                     {
                          $all = "";
                        for($j=1; $j<=5; $j++){
@@ -265,7 +267,7 @@ function questChange($quest){
                         . "<td style='border-bottom:1px dotted #aaa; padding:5px;'><strong>".$xml->login->$answer->name."</strong><br>".$all."</td>"
                     . "</tr>";
                     }
-                    if(($xml->sync->description == $title))
+                    if($xml->sync->title == $title)
                     {
                          $all = "";
                        for($j=1; $j<=5; $j++){
@@ -280,7 +282,7 @@ function questChange($quest){
                         . "<td style='border-bottom:1px dotted #aaa; padding:5px;'><strong>".$xml->sync->$answer->name."</strong><br>".$all."</td>"
                     . "</tr>";
                     }
-                    if(($xml->rate->description == $title))
+                    if($xml->rate->title == $title)
                     {
                          $all = "";
                        for($j=1; $j<=5; $j++){
@@ -295,7 +297,7 @@ function questChange($quest){
                         . "<td style='border-bottom:1px dotted #aaa; padding:5px;'><strong>".$xml->rate->$answer->name."</strong><br>".$all."</td>"
                     . "</tr>";
                     }
-                    if(($xml->graphics->description == $title))
+                    if($xml->graphics->title == $title)
                     {
                          $all = "";
                        for($j=1; $j<=5; $j++){
@@ -310,7 +312,7 @@ function questChange($quest){
                         . "<td style='border-bottom:1px dotted #aaa; padding:5px;'><strong>".$xml->graphics->$answer->name."</strong><br>".$all."</td>"
                     . "</tr>";
                     }
-                    if(($xml->profiles->description == $title))
+                    if($xml->profiles->title == $title)
                     {
                          $all = "";
                        for($j=1; $j<=5; $j++){
@@ -325,7 +327,7 @@ function questChange($quest){
                         . "<td style='border-bottom:1px dotted #aaa; padding:5px;'><strong>".$xml->profiles->$answer->name."</strong><br>".$all."</td>"
                     . "</tr>";
                     }
-                    if(($xml->project->description == $title))
+                    if($xml->project->title == $title)
                     {
                          $all = "";
                        for($j=1; $j<=5; $j++){
@@ -340,7 +342,7 @@ function questChange($quest){
                         . "<td style='border-bottom:1px dotted #aaa; padding:5px;'><strong>".$xml->project->$answer->name."</strong><br>".$all."</td>"
                     . "</tr>";
                     }
-                    if(($xml->wtype->description == $title))
+                    if($xml->wtype->title == $title)
                     {
                          $all = "";
                        for($j=1; $j<=5; $j++){
@@ -362,7 +364,7 @@ function questChange($quest){
                         . "<td style='border-bottom:1px dotted #aaa; padding:5px;'><strong>".$xml->wtype->$answer->name."</strong><br>".$all."</td>"
                     . "</tr>";
                     }
-                    if(($xml->based->description == $title))
+                    if($xml->based->title == $title)
                     {
                          $all = "";
                        for($j=1; $j<=5; $j++){
@@ -377,7 +379,7 @@ function questChange($quest){
                         . "<td style='border-bottom:1px dotted #aaa; padding:5px;'><strong>".$xml->based->$answer->name."</strong><br>".$all."</td>"
                     . "</tr>";
                     }
-                    if(($xml->languages->description == $title))
+                    if($xml->languages->title == $title)
                     {
                          $all = "";
                        for($j=1; $j<=5; $j++){
@@ -392,7 +394,7 @@ function questChange($quest){
                         . "<td style='border-bottom:1px dotted #aaa; padding:5px;'><strong>".$xml->languages->$answer->name."</strong><br>".$all."</td>"
                     . "</tr>";
                     }
-                    if(($xml->responsive->description == $title))
+                    if($xml->responsive->title == $title)
                     {
                          $all = "";
                        for($j=1; $j<=5; $j++){
@@ -407,7 +409,7 @@ function questChange($quest){
                         . "<td style='border-bottom:1px dotted #aaa; padding:5px;'><strong>".$xml->responsive->$answer->name."</strong><br>".$all."</td>"
                     . "</tr>";
                     }
-                    if(($xml->design->description == $title))
+                    if($xml->design->title == $title)
                     {
                          $all = "";
                        for($j=1; $j<=5; $j++){
@@ -422,7 +424,7 @@ function questChange($quest){
                         . "<td style='border-bottom:1px dotted #aaa; padding:5px;'><strong>".$xml->design->$answer->name."</strong><br>".$all."</td>"
                     . "</tr>";
                     }
-                    if(($xml->marketing->description == $title))
+                    if($xml->marketing->title == $title)
                     {
                          $all = "";
                        for($j=1; $j<=5; $j++){
@@ -436,11 +438,11 @@ function questChange($quest){
                         . "<td style='border-bottom:1px dotted #aaa; padding:5px;'>".$xml->marketing->title."</td>"
                         . "<td style='border-bottom:1px dotted #aaa; padding:5px;'><strong>".$xml->marketing->$answer->desc."</strong><br>".$all."</td>"
                     . "</tr>";
-                    }
-                }
-                
+                    } * */
+                }//for end
                 
             }
+					
             $message .= "</table>";
         }
         return $message;
