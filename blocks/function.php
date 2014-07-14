@@ -209,7 +209,7 @@ function makeMail($data, $arr) {
 
 				$message .= "<tr>"
 						. "<td  style='border-bottom:1px dotted #aaa; padding:5px;'>" . $xml->payments->title . "</td>"
-						. "<td  style='border-bottom:1px dotted #aaa; padding:5px;'>" . $all . "</td>"
+						. "<td  style='border-bottom:1px dotted #aaa;'>" . $all . "</td>"
 						. "</tr>";
 			}
 			if ($xml->login->title == $title) {
@@ -225,7 +225,7 @@ function makeMail($data, $arr) {
 
 				$message .= "<tr>"
 						. "<td  style='border-bottom:1px dotted #aaa; padding:5px;'>" . $xml->login->title . "</td>"
-						. "<td  style='border-bottom:1px dotted #aaa; padding:5px;'>" . $all . "</td>"
+						. "<td  style='border-bottom:1px dotted #aaa;'>" . $all . "</td>"
 						. "</tr>";
 			}
 			
@@ -258,7 +258,7 @@ function makeMail($data, $arr) {
 
 				$message .= "<tr>"
 						. "<td  style='border-bottom:1px dotted #aaa; padding:5px;'>" . $xml->rate->title . "</td>"
-						. "<td  style='border-bottom:1px dotted #aaa; padding:5px;'>" . $all . "</td>"
+						. "<td  style='border-bottom:1px dotted #aaa;'>" . $all . "</td>"
 						. "</tr>";
 			}
 			if ($xml->graphics->title == $title) {
@@ -274,7 +274,7 @@ function makeMail($data, $arr) {
 
 				$message .= "<tr>"
 						. "<td  style='border-bottom:1px dotted #aaa; padding:5px;'>" . $xml->graphics->title . "</td>"
-						. "<td  style='border-bottom:1px dotted #aaa; padding:5px;'>" . $all . "</td>"
+						. "<td  style='border-bottom:1px dotted #aaa;'>" . $all . "</td>"
 						. "</tr>";
 			}
 			if ($xml->profiles->title == $title) {
@@ -290,7 +290,7 @@ function makeMail($data, $arr) {
 
 				$message .= "<tr>"
 						. "<td  style='border-bottom:1px dotted #aaa; padding:5px;'>" . $xml->profiles->title . "</td>"
-						. "<td  style='border-bottom:1px dotted #aaa; padding:5px;'>" . $all . "</td>"
+						. "<td  style='border-bottom:1px dotted #aaa;'>" . $all . "</td>"
 						. "</tr>";
 			}
 			if ($xml->project->title == $title) {
@@ -306,7 +306,7 @@ function makeMail($data, $arr) {
 
 				$message .= "<tr>"
 						. "<td  style='border-bottom:1px dotted #aaa; padding:5px;'>" . $xml->project->title . "</td>"
-						. "<td  style='border-bottom:1px dotted #aaa; padding:5px;'>" . $all . "</td>"
+						. "<td  style='border-bottom:1px dotted #aaa;'>" . $all . "</td>"
 						. "</tr>";
 			}
 			if ($xml->website->title == $title) {
@@ -322,7 +322,7 @@ function makeMail($data, $arr) {
 
 				$message .= "<tr>"
 						. "<td  style='border-bottom:1px dotted #aaa; padding:5px;'>" . $xml->website->title . "</td>"
-						. "<td  style='border-bottom:1px dotted #aaa; padding:5px;'>" . $all . "</td>"
+						. "<td  style='border-bottom:1px dotted #aaa;'>" . $all . "</td>"
 						. "</tr>";
 			}
 			if ($xml->wtype->title == $title) {
@@ -344,7 +344,7 @@ function makeMail($data, $arr) {
 						. "$bg&euro;</td>"
 						. "</tr><tr>"
 						. "<td style='border-bottom:1px dotted #aaa; padding:5px;'>" . $xml->wtype->title . "</td>"
-						. "<td style='border-bottom:1px dotted #aaa; padding:5px;'>". $all . "</td>"
+						. "<td style='border-bottom:1px dotted #aaa;'>". $all . "</td>"
 						. "</tr>";
 			}
 			if ($xml->based->title == $title) {
@@ -360,7 +360,7 @@ function makeMail($data, $arr) {
 
 				$message .= "<tr>"
 						. "<td  style='border-bottom:1px dotted #aaa; padding:5px;'>" . $xml->based->title . "</td>"
-						. "<td  style='border-bottom:1px dotted #aaa; padding:5px;'>" . $all . "</td>"
+						. "<td  style='border-bottom:1px dotted #aaa;'>" . $all . "</td>"
 						. "</tr>";
 			}
 			if ($xml->languages->title == $title) {
@@ -376,7 +376,7 @@ function makeMail($data, $arr) {
 
 				$message .= "<tr>"
 						. "<td  style='border-bottom:1px dotted #aaa; padding:5px;'>" . $xml->languages->title . "</td>"
-						. "<td  style='border-bottom:1px dotted #aaa; padding:5px;'>" . $all . "</td>"
+						. "<td  style='border-bottom:1px dotted #aaa;'>" . $all . "</td>"
 						. "</tr>";
 			}
 			if ($xml->responsive->title == $title) {
@@ -392,7 +392,7 @@ function makeMail($data, $arr) {
 
 				$message .= "<tr>"
 						. "<td  style='border-bottom:1px dotted #aaa; padding:5px;'>" . $xml->responsive->title . "</td>"
-						. "<td  style='border-bottom:1px dotted #aaa; padding:5px;'>" . $all . "</td>"
+						. "<td  style='border-bottom:1px dotted #aaa; '>" . $all . "</td>"
 						. "</tr>";
 			}
 			if ($xml->design->title == $title) {
@@ -408,7 +408,7 @@ function makeMail($data, $arr) {
 
 				$message .= "<tr>"
 						. "<td  style='border-bottom:1px dotted #aaa; padding:5px;'>" . $xml->design->title . "</td>"
-						. "<td  style='border-bottom:1px dotted #aaa; padding:5px;'>" . $all . "</td>"
+						. "<td  style='border-bottom:1px dotted #aaa;'>" . $all . "</td>"
 						. "</tr>";
 			}
 			if ($xml->marketing->title == $title) {
@@ -424,7 +424,7 @@ function makeMail($data, $arr) {
 
 				$message .= "<tr>"
 						. "<td  style='border-bottom:1px dotted #aaa; padding:5px;'>" . $xml->marketing->title . "</td>"
-						. "<td  style='border-bottom:1px dotted #aaa; padding:5px;'>" . $all . "</td>"
+						. "<td  style='border-bottom:1px dotted #aaa;'>" . $all . "</td>"
 						. "</tr>";
 			}
 			if($xml->interface->title == $title){
