@@ -54,8 +54,7 @@
 
 		</script>
 		<script>
-			< script >
-						var time = 0;
+				var time = 0;
 				var wtime = 0;
 				setInterval(function() {
 					time++;
@@ -67,7 +66,6 @@
 					time = 0;
 				});
 		</script>
-	</script>
 </head>
 
 <body>
