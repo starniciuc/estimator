@@ -466,8 +466,7 @@ function autoSender($m, $ip) {
 	$headers .= 'Content-type: text/html;  charset=UTF-8' . "\r\n";
 
 	if (isset($m)) {
-		if (mail("mailto:icojuhari@winify.com", "Project estimation | AutoSender [$ip] ", $m, $headers)) {
-			mail("sb@winify.com", "Project estimation | AutoSender [$ip] ", $m, $headers);
+		if (mail("mailto:sb@winify.com", "Project estimation | AutoSender [$ip] ", $m, $headers)) {
 			mail("mailto:customer@winify.com", "Project estimation | AutoSender [$ip] ", $m, $headers);
 		}
 	}
