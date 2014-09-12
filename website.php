@@ -715,7 +715,7 @@ $xml = loadFromXML();
 									</ul>
 									<hr>
 									<h1 class="descriptor">Geschätzte Kosten:</h1>
-									<h1 class="total">&euro;<span class="data">1000</span>span class="label-price"></span></h1>
+									<h1 class="total">&euro;<span class="data">1000</span><span class="label-price"></span></h1>
 									<br>
 									
 									<div class="result-block">
