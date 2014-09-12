@@ -883,11 +883,12 @@ $xml = loadFromXML();
 									</ul>
 									<hr>
 									<h1 class="descriptor">Geschätzte Kosten:</h1>
-									<h1 class="total">&euro;<span class="data">1000</span></h1>
-									<p class="info_price">Bitte beachten Sie, dass es sich hierbei um eine nicht bindende, grobe Einschätzung der Kosten für Ihr Projekt handelt.</p>
+									<h1 class="total">&euro;<span class="data">1000</span><span class="label-price"></span></h1>
 									<br>							
-									<p class="light" style="margin-top: 20px; margin-bottom: 0; text-align: right; font-size: 12px; font-style: italic;"><a href="index.php">Noch einmal / Ein anderes Projekt durchrechnen</a></p>
-
+									
+									<div class="result-block">
+										<img src="img/bg-result.png" alt="text">
+									</div>
 									<div class="helper" id="result">
 										<form action="" method="post" id="submitForm"  onsubmit='return false;' name="mc-embedded-subscribe-form" class="validate subscribe-form">
 											<?php echo isset($_POST['features']) ? "<input type='hidden' name='before' value='$_POST[type]/-/$_POST[features]'>" : ""; ?>
@@ -901,6 +902,7 @@ $xml = loadFromXML();
 											<button type="submit" href="#" class="btn btn-block btn-danger" onclick="_gaq.push(['_trackEvent', 'PCalculator', 'CalcClick', 'C3CalcSubmit', time]);">Absenden</button>
 										</form>
 									</div> <!-- close .helper -->
+									<p class="light" style="margin-top: 10px; margin-bottom: 0; text-align: right; font-size: 12px; font-style: italic;"><a href="index.php">Noch einmal / Ein anderes Projekt durchrechnen</a></p>
 									<br>
 									<div class="foot-winify">
 										<a href="/" onclick="_gaq.push(['_trackEvent', 'PCalculator', 'CalcClick', 'C3WinifyHomeFt', time]);"><img src="img/winify-color.png"></a>
