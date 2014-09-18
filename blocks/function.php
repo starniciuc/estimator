@@ -91,9 +91,18 @@ function saveNewPrice($p) {
  */
 function loadFromXML() {
 	
-	if (file_exists('quest.xml')) {
-		$xml = simplexml_load_file('quest.xml');
+	$actual_link = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
+	
+	if (strpos($actual_link,'de') !== false) {
+		if (file_exists('quest.xml')) {
+			$xml = simplexml_load_file('quest.xml');
+		}
+	}else{
+		if (file_exists('quest-en.xml')) {
+			$xml = simplexml_load_file('quest-en.xml');
+		}
 	}
+	
 	return $xml;
 }
 
