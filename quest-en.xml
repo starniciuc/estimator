@@ -1,0 +1,394 @@
+<?xml version='1.0' encoding='UTF-8' ?> 
+<!-- was: <?xml version="1.0" encoding="ISO-8859-1"?> -->
+<savequest>
+    <price>30</price>
+    <type>
+        <title>Which operating system would you prefer for your app?</title>
+        <description>Which operating system would you prefer for your app?</description>
+        <answer1>
+            <name>iOS (Apple)</name>
+            <desc>iOS (Apple)</desc>
+            <hour>160</hour>
+        </answer1>
+        <answer2>
+            <name>Android</name>
+            <desc>Android</desc>
+            <hour>160</hour>
+        </answer2>
+        <answer3>
+            <name>Windows Mobile</name>
+            <desc>Windows Mobile</desc>
+            <hour>160</hour>
+        </answer3>
+        <answer4>
+            <name>iOS + Android</name>
+            <desc>iOS Android app</desc>
+            <hour>320</hour>
+            <percent>1.5</percent>
+        </answer4>
+        <answer5>
+            <name>iOS + Android + Windows</name>
+            <desc>iOS + Android + Windows</desc>
+            <hour>480</hour>
+            <percent>2</percent>
+        </answer5>
+    </type>
+    
+    <device>
+        <title>Which kind of device should your app be designed for?</title>
+        <description>Type of device.</description>
+        <answer1>
+            <name>Mobile</name>
+            <desc>Mobile device</desc>
+        </answer1>
+        <answer2>
+            <name>Tablet</name>
+            <desc>Tablet</desc>
+        </answer2>
+        <answer3>
+            <name>Both</name>
+            <desc>Both devices</desc>
+            <percent>1.4</percent>            
+        </answer3>
+    </device>
+    
+    <interface>
+        <title>Which type of graphical user interface (GUI) should your app have?</title>
+        <description>Type of interface</description>
+        <answer1>
+            <name>Standard OS type </name>
+            <desc>Default Interface</desc>
+            <hour>0</hour>
+        </answer1>
+        <answer2>
+            <name>Customized solution</name>
+            <desc>New custom interface</desc>
+            <hour>30</hour>
+        </answer2>
+        <answer3>
+            <name>I don’t know. Please consult me.</name>
+            <desc>IDK</desc>
+            <hour>20</hour>
+        </answer3>
+    </interface>
+    
+    <payments>
+        <title>Should your app include a payment function?</title>
+        <description>Use in-app payments</description>
+        <answer1>
+            <name>Yes</name>
+            <desc>In app payments</desc>
+            <hour>40</hour>
+        </answer1>
+        <answer2>
+            <name>No</name>
+            <desc>No</desc>
+            <hour>0</hour>
+        </answer2>
+        <answer3>
+            <name>Not yet, maybe later.</name>
+            <desc>IDK</desc>
+            <hour>20</hour>
+        </answer3>
+    </payments>
+    
+    <login>
+        <title>Will your app need a login function?</title>
+        <description>Log in system.</description>
+        <answer1>
+            <name>Yes, a "social login".</name>
+            <desc>Social Login</desc>
+            <hour>60</hour>
+        </answer1>
+        <answer2>
+            <name> Yes, an "e-mail login".</name>
+            <desc>Email Login</desc>
+            <hour>40</hour>
+        </answer2>
+        <answer3>
+            <name>No</name>
+            <desc>No</desc>
+            <hour>0</hour>
+        </answer3>
+        <answer4>
+            <name>I don’t know. Please consult me.</name>
+            <desc>I don’t know. Please consult me.</desc>
+            <hour>50</hour>
+        </answer4>
+    </login>
+    
+    <sync>
+        <title>Should your app be able to sync data across devices?</title>
+        <description>Sync data across devices</description>
+        <answer1>
+            <name>Yes, user data should be backed up in the cloud.</name>
+            <desc>Device Sync</desc>
+            <hour>10</hour>
+        </answer1>
+        <answer2>
+            <name>No</name>
+            <price>0</price>
+            <desc>No</desc>
+            <hour>0</hour>
+        </answer2>
+        <answer3>
+            <name>I don’t know. Please consult me.</name>
+            <desc>I don’t know. Please consult me.</desc>
+            <hour>5</hour>
+        </answer3>
+    </sync>
+    
+    <rate>
+        <title>Should your app have a ratings and reviews solution?</title>
+        <description>Rating system</description>
+        <answer1>
+            <name>Yes</name>
+            <desc>Ratings/Reviews</desc>
+            <hour>40</hour>
+        </answer1>
+        <answer2>
+            <name>No</name>
+            <desc>No</desc>
+            <hour>0</hour>
+        </answer2>
+        <answer3>
+            <name>Not now, maybe later</name>
+            <desc>IDK</desc>
+            <hour>20</hour>
+        </answer3>
+    </rate>
+    
+    <graphics>
+        <title>Will you need the assistance of our graphic design team?</title>
+        <description>Graphic design assistance</description>
+        <answer1>
+            <name>Yes</name>
+            <hour>60</hour>
+            <desc>Graphic-Design assistance</desc>
+        </answer1>
+        <answer2>
+            <name>No, I will provide all the designs.</name>
+            <hour>0</hour>
+            <desc>No</desc>
+        </answer2>
+    </graphics>
+	
+    <profiles>
+        <title>Should your users be able to create and save their own profiles?</title>
+        <description> Profiles</description>
+        <answer1>
+            <name>Yes</name>
+            <desc>User Profiles</desc>
+            <hour>40</hour>
+        </answer1>
+        <answer2>
+            <name>No</name>
+            <desc>No</desc>
+            <hour>0</hour>
+        </answer2>
+        <answer3>
+            <name>I don’t know. Please consult me.</name>
+            <desc>IDK</desc>
+            <hour>20</hour>
+        </answer3>
+    </profiles>
+    
+    <website>
+        <title>Do you also want a website for your app?</title>
+        <description> Website</description>
+        <answer1>
+            <name>Yes</name>
+            <desc>Yes</desc>
+            
+        </answer1>
+        <answer2>
+            <name>No</name>
+            <desc>No</desc>
+            
+        </answer2>
+        <answer3>
+            <name>Not now, maybe later</name>
+            <desc>IDK</desc>
+            <hour>100</hour>
+        </answer3>
+    </website>
+    
+    <project>
+        <title>What is the current state of your project?</title>
+        <description> Project</description>
+        <answer1>
+            <name>Idea</name>
+            <desc>At the idea stage</desc>
+            <percent>1.4</percent>
+        </answer1>
+        <answer2>
+            <name>Sketch</name>
+            <desc>At the sketching stage</desc>
+            <percent>1.3</percent>
+        </answer2>
+        <answer3>
+            <name>In Development</name>
+            <desc>At the in-development stage</desc>
+            <percent>1.2</percent>
+        </answer3>
+    </project>
+    
+    <wtype>
+        <title>Which kind of website would you prefer?</title>
+        <description>Type website</description>
+        <answer1>
+            <name>Informational</name>
+            <hour>100</hour>
+            <desc>Informational website</desc>
+        </answer1>
+        <answer2>
+            <name>Community / social</name>
+            <hour>250</hour>
+            <desc>Comunity-build/social website</desc>
+        </answer2>
+        <answer3>
+            <name>Online Business</name>
+            <hour>300</hour>
+            <desc>Online-Business website</desc>
+        </answer3>
+        <answer4>
+            <name>E-commerce</name>
+            <hour>300</hour>
+            <desc>E-Commerce website</desc>
+        </answer4>
+        <answer5>
+            <name>Other</name>
+            <hour>200</hour>
+            <desc>Other website</desc>
+        </answer5>
+    </wtype>
+    
+    <based>
+        <title>Will you need a content management system for your website? </title>
+        <description> Website based</description>
+        <answer1>
+            <name>Yes, using a CMS (Wordpress, Drupal, Typo3, Joomla) </name>
+            <hour>50</hour>
+            <desc> Yes, using a CMS (Wordpress, Drupal, Typo3, Joomla) </desc>
+        </answer1>
+        <answer2>
+            <name>Yes, a customized solution.</name>
+            <hour>120</hour>
+            <desc>Yes, a customized solution.</desc>
+        </answer2>
+        <answer3>
+            <name>I don’t know. Please consult me.</name>
+            <hour>70</hour>
+            <desc>IDK</desc>
+        </answer3>
+    </based>
+    
+    <languages>
+        <title>Your website should be available in how many languages?</title>
+        <description> Languages.</description>
+        <answer1>
+            <name>1</name>
+            <hour>0</hour>
+            <desc>One language</desc>
+        </answer1>
+        <answer2>
+            <name>2 - 3</name>
+            <hour>60</hour>
+            <desc>2-3 Languages</desc>
+        </answer2>
+        <answer3>
+            <name>More</name>
+            <hour>100</hour>
+            <desc>More languages</desc>
+        </answer3>
+    </languages>
+    
+    <responsive>
+        <title>Should the design of your website automatically respond to the user's type of device (responsive web design)? </title>
+        <description> Resposive design</description>
+        <answer1>
+            <name>Yes</name>
+            <hour>40</hour>
+            <desc>Website to be responsive</desc>
+        </answer1>
+        <answer2>
+            <name>No</name>
+            <hour>0</hour>
+            <desc>No</desc>
+        </answer2>
+        <answer3>
+            <name>I don’t know. Please consult me.</name>
+            <hour>20</hour>
+            <desc>IDK</desc>
+        </answer3>
+    </responsive>
+    
+    <design>
+        <title>Will you need the assistance of our graphic design team?</title>
+        <description> Graphic Design assistance</description>
+        <answer1>
+            <name>Yes</name>
+            <hour>60</hour>
+            <desc>Graphic-Design assistance</desc>
+        </answer1>
+        <answer2>
+            <name>No, I will provide all the designs. </name>
+            <hour>0</hour>
+            <desc>No</desc>
+        </answer2>
+    </design>
+	    
+    <marketing>
+        <title>Will you need help with search engine optimization (SEO) and marketing (SEM)?</title>
+        <description> SEO Promotion/Marketing </description>
+        <answer1>
+            <name>Yes</name>
+            <hour>40</hour>
+            <desc>Marketing</desc>
+        </answer1>
+        <answer2>
+            <name>No</name>
+            <hour>0</hour>
+            <desc>No</desc>
+        </answer2>
+        <answer3>
+            <name>I don’t know. Please consult me.</name>
+            <hour>25</hour>
+            <desc>I don’t know. Please consult me.</desc>
+        </answer3>
+    </marketing>
+             
+    <wproject>
+        <title>What is the current state of your project?</title>
+        <description> Project </description>
+        <answer1>
+            <name>Idea</name>
+            <desc>At the idea stage</desc>
+            <percent>1.4</percent>
+        </answer1>
+        <answer2>
+            <name>Sketch</name>
+            <desc>At the sketching stage</desc>
+            <percent>1.3</percent>
+        </answer2>
+        <answer3>
+            <name>In development</name>
+            <desc>In-development stage</desc>
+            <percent>1.2</percent>
+        </answer3>
+    </wproject>
+    
+    <app>
+        <title>Will you need an app for your website?</title>
+        <description> Application</description>
+        <answer1>
+            <name>Yes</name>
+            <desc>Yes</desc>
+        </answer1>
+        <answer2>
+            <name>Not yet, maybe later. </name>
+            <desc>No</desc>
+        </answer2>
+    </app>
+    
+</savequest>
