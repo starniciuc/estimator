@@ -1,6 +1,6 @@
 <?php
-	$Get_url = "http://" . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URl'];
-	echo $Get_url;
+	$actual_link = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
+	echo $actual_link;
 ?>
 <!DOCTYPE html>
 <html>
