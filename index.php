@@ -1,5 +1,11 @@
 <?php
-	
+	$actual_link = "$_SERVER[REQUEST_URI]";
+	$lang = true;
+	if (strpos($actual_link,'de') !== false) {
+		$lang = true;
+	}else{
+		$lang = false;
+	}
 ?>
 <!DOCTYPE html>
 <html>
@@ -81,20 +87,27 @@
 
 			<div id="start" style="display: block;">
 				<div class="titleQuestion">
-					<h2>Mir ist klar, dass es sich bei den Angaben um Schätzwerte handelt.</h2>
+					<?php if($lang){ ?><h2>Mir ist klar, dass es sich bei den Angaben um Schätzwerte handelt.</h2>
+					<?php }else{ ?><h2>I am aware that all information are estimates.</h2><?php }?>
 				</div>
 
 				<div class="answerContent2">   
 					<a href="javascript:startEstimator()" onclick="_gaq.push(['_trackEvent', 'PCalculator', 'CalcClick', 'C1ClearYes', time]);">
 						<div class="answer">
 							<div class="imgContent"><img src="img/check.png"></div> 
-							<div class="inputBlock"><h1>Ja</h1> </div>
+							<div class="inputBlock">
+								<?php if($lang){ ?><h1>Ja</h1>
+								<?php }else{ ?><h1>Yes</h1><?php }?>
+							</div>
 						</div>
 					</a> 
 					<a href="/" onclick="_gaq.push(['_trackEvent', 'PCalculator', 'CalcClick', 'C1ClearNo', time]);">
 						<div class="answer">
-							<div class="imgContent"><img src="img/no.png"></div> 
-							<div class="inputBlock"><h1>Nein</h1></div>
+							<div class="imgContent"><img src="img/no.png"></div>
+							<div class="inputBlock">
+								<?php if($lang){ ?><h1>Nein</h1>
+								<?php }else{ ?><h1>No</h1><?php }?>
+							</div>
 						</div>
 					</a>
 				</div>
@@ -102,7 +115,8 @@
 
 			<div id="platform" style="display: none;">
 				<div class="titleQuestion">
-					<h2>Für welches Produkt möchten Sie die Kosten schätzen?</h2>
+					<?php if($lang){ ?><h2>Für welches Produkt möchten Sie die Kosten schätzen?</h2>
+					<?php }else{ ?><h2>For which product do you want to get the costs calculated?</h2><?php }?>
 				</div>
 
 				<div class="answerContent2">   
