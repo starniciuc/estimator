@@ -1,3 +1,7 @@
+<?php
+	$Get_url = "http://" . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URl'];
+	echo $Get_url;
+?>
 <!DOCTYPE html>
 <html>
 

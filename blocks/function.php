@@ -90,6 +90,7 @@ function saveNewPrice($p) {
  * Load data from xml file. 
  */
 function loadFromXML() {
+	
 	if (file_exists('quest.xml')) {
 		$xml = simplexml_load_file('quest.xml');
 	}
