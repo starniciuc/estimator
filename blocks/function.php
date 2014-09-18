@@ -7,7 +7,6 @@ function questChange($quest) {
 	setcookie("SaveChange", $quest, time() + 300);
 	header("LOCATION: admin.php");
 }
-
 /**
  * Save data into xml file
  */
