@@ -91,9 +91,9 @@ function saveNewPrice($p) {
  */
 function loadFromXML() {
 	
-	$actual_link = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
+	$actual_link = "$_SERVER[REQUEST_URI]";
 	echo $actual_link;
-	if (strpos($actual_link,'de') !== false) {
+	if (strpos($actual_link,'en') !== false) {
 		if (file_exists('quest.xml')) {
 			$xml = simplexml_load_file('quest.xml');
 			echo "german";
