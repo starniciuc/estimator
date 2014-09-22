@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='UTF-8' ?> 
 <!-- was: <?xml version="1.0" encoding="ISO-8859-1"?> -->
 <savequest>
-    <price>30</price>
+    <price>15</price>
     <type>
         <title>Which operating system would you prefer for your app?</title>
         <description>Which operating system would you prefer for your app?</description>
@@ -67,7 +67,7 @@
         </answer2>
         <answer3>
             <name>I don’t know. Please consult me.</name>
-            <desc>IDK</desc>
+            <desc>I don’t know. Please consult me.</desc>
             <hour>20</hour>
         </answer3>
     </interface>
@@ -87,7 +87,7 @@
         </answer2>
         <answer3>
             <name>Not yet, maybe later.</name>
-            <desc>IDK</desc>
+            <desc>Not yet, maybe later.</desc>
             <hour>20</hour>
         </answer3>
     </payments>
@@ -279,7 +279,7 @@
         <answer3>
             <name>I don’t know. Please consult me.</name>
             <hour>70</hour>
-            <desc>IDK</desc>
+            <desc>I don’t know. Please consult me.</desc>
         </answer3>
     </based>
     

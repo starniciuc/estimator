@@ -1,5 +1,12 @@
 <?php
 include "blocks/function.php";
+$actual_link = "$_SERVER[REQUEST_URI]";
+$lang = true;
+if (strpos($actual_link, 'de') !== false) {
+	$lang = true;
+} else {
+	$lang = false;
+}
 $xml = loadFromXML();
 @$app = $_POST['dir'] ? $_POST['dir'] : "";
 ?>
@@ -738,7 +745,11 @@ $xml = loadFromXML();
 							</div> <!-- close .row-fluid -->
 							<div class="row-fluid">
 								<div class="span4">
-									<a href="#" <?php if ($app == "web") { echo "class='final-question'"; }?>  onclick="_gaq.push(['_trackEvent', 'PCalculator', 'CalcClick', 'M10Idea', time]);">
+									<a href="#" <?php
+									if ($app == "web") {
+										echo "class='final-question'";
+									}
+									?>  onclick="_gaq.push(['_trackEvent', 'PCalculator', 'CalcClick', 'M10Idea', time]);">
 										<div>
 											<div class="flip-container" data-value="<?php echo $xml->project->answer1->desc; ?>" data-multiplier="<?php echo $xml->project->answer1->percent; ?>" data-constant="0" data-percent="<?php echo $xml->project->answer1->percent; ?>">
 												<div class="flipper">
@@ -754,7 +765,11 @@ $xml = loadFromXML();
 									</a>
 								</div>
 								<div class="span4">
-									<a href="#" <?php if ($app == "web") { echo "class='final-question'"; }?>  onclick="_gaq.push(['_trackEvent', 'PCalculator', 'CalcClick', 'M10Sketch', time]);">
+									<a href="#" <?php
+									if ($app == "web") {
+										echo "class='final-question'";
+									}
+									?>  onclick="_gaq.push(['_trackEvent', 'PCalculator', 'CalcClick', 'M10Sketch', time]);">
 										<div>
 											<div class="flip-container" data-value="<?php echo $xml->project->answer2->desc; ?>" data-multiplier="<?php echo $xml->project->answer2->percent; ?>" data-constant="0" data-percent="<?php echo $xml->project->answer2->percent; ?>">
 												<div class="flipper">
@@ -770,7 +785,11 @@ $xml = loadFromXML();
 									</a>
 								</div>
 								<div class="span4">
-									<a href="#" <?php if ($app == "web") { echo "class='final-question'"; }?> onclick="_gaq.push(['_trackEvent', 'PCalculator', 'CalcClick', 'M10Prototype', time]);">
+									<a href="#" <?php
+									if ($app == "web") {
+										echo "class='final-question'";
+									}
+									?> onclick="_gaq.push(['_trackEvent', 'PCalculator', 'CalcClick', 'M10Prototype', time]);">
 										<div>
 											<div class="flip-container" data-value="<?php echo $xml->project->answer3->desc; ?>" data-multiplier="<?php echo $xml->project->answer3->percent; ?>" data-constant="0" data-percent="<?php echo $xml->project->answer3->percent; ?>">
 												<div class="flipper">
@@ -789,7 +808,7 @@ $xml = loadFromXML();
 						</div> <!-- close .wrapper -->
 					</div> <!-- close .entry -->
 
-					<?php if (!$app == "web") { ?>
+<?php if (!$app == "web") { ?>
 						<!-- QUESTION: INTEGRATED/STANDALONE -->
 						<div class="entry js-entry" data-method="integration" data-description="<?php echo $xml->website->description; ?>" style="display: none;">
 							<div class="wrapper">
@@ -850,7 +869,7 @@ $xml = loadFromXML();
 								</div> <!-- close .row-fluid -->
 							</div> <!-- close .wrapper -->
 						</div> <!-- close .entry -->
-					<?php } ?>
+<?php } ?>
 
 					<!-- QUESTION -->
 					<div class="entry js-entry-final" style="display: none;">
@@ -861,11 +880,11 @@ $xml = loadFromXML();
 										<a href="/" onclick="_gaq.push(['_trackEvent', 'PCalculator', 'CalcClick', 'C3WinifyHomeHd', time]);"><img src="img/winify-color.png"></a>
 										<hr>
 									</div>
-									<?php
-									if ($app == "web") {
-										require_once("before.php");
-									}
-									?>
+<?php
+if ($app == "web") {
+	require_once("before.php");
+}
+?>
 									<div class="clearfix first-line">
 										<h1 class="heading weight-bold">Unsere Kostenschätzung für Ihr Projekt - Mobile Application</h1>
 										<!-- <a href="#" class="btn btn-small btn-primary" id="share" title="Share your estimate and scope with a friend">Share</a> -->
@@ -882,10 +901,10 @@ $xml = loadFromXML();
 										</li>
 									</ul>
 									<hr>
-									<h1 class="descriptor">Geschätzte Kosten:</h1>
+									<h1 class="descriptor"><?php if($lang){ ?>Geschätzte Kosten:<?php }else{ ?>Geschätzte Kosten:<?php }?></h1>
 									<h1 class="total">&euro;<span class="data">1000</span><span class="label-price"></span></h1>
 									<br>							
-									
+
 									<div class="result-block">
 										<img src="img/bg-result.png" alt="text">
 									</div>
@@ -896,19 +915,19 @@ $xml = loadFromXML();
 											<?php echo isset($_POST['features']) ? "<input type='hidden' name='obudget' value='$_POST[budget]'>" : ""; ?>
 											<input type="hidden" value="1" name="type">
 											<input type="hidden" value="sendMail" name="send">
-											<input type="text" value="" name="ClientName" class="required inputtext"  placeholder="Ihr Name">
-											<input type="text" value="" name="EMAIL" class="required email"  placeholder="Ihre E-Mail Adresse">
-											<textarea name="mess" placeholder="Ihre Nachricht an uns."></textarea>
-											<button type="submit" href="#" class="btn btn-block btn-danger" onclick="_gaq.push(['_trackEvent', 'PCalculator', 'CalcClick', 'C3CalcSubmit', time]);">Absenden</button>
+											<input type="text" value="" name="ClientName" class="required inputtext"  placeholder="<?php if($lang){ ?>Ihr Name<?php }else{ ?>Name<?php }?>">
+											<input type="text" value="" name="EMAIL" class="required email"  placeholder="<?php if($lang){ ?>Ihre E-Mail Adresse<?php }else{ ?>Email<?php }?>">
+											<textarea name="mess" placeholder="<?php if($lang){ ?>Ihre Nachricht an uns.<?php }else{ ?>Message<?php }?>"></textarea>
+											<button type="submit" href="#" class="btn btn-block btn-danger" onclick="_gaq.push(['_trackEvent', 'PCalculator', 'CalcClick', 'C3CalcSubmit', time]);"><?php if($lang){ ?>Absenden<?php }else{ ?>SUBMIT YOUR PROJECT<?php }?></button>
 										</form>
 									</div> <!-- close .helper -->
-									<p class="light" style="margin-top: 10px; margin-bottom: 0; text-align: right; font-size: 12px; font-style: italic;"><a href="index.php">Noch einmal / Ein anderes Projekt durchrechnen</a></p>
+									<p class="light" style="margin-top: 10px; margin-bottom: 0; text-align: right; font-size: 12px; font-style: italic;"><a href="index.php"><?php if($lang){ ?>Noch einmal / Ein anderes Projekt durchrechnen<?php }else{ ?>Estimate another project<?php }?></a></p>
 									<br>
 									<div class="foot-winify">
 										<a href="/" onclick="_gaq.push(['_trackEvent', 'PCalculator', 'CalcClick', 'C3WinifyHomeFt', time]);"><img src="img/winify-color.png"></a>
 									</div>
 									<div class="contact">
-										<p><strong>Kontakt:</strong></p>
+										<p><strong><?php if($lang){ ?>Kontakt:<?php }else{ ?>Contact:<?php }?></strong></p>
 										<p>+41 41 511 2684 (Schweiz)</p>
 										<p>+49 177 88 458 12 (Deutschland)</p>
 									</div>
