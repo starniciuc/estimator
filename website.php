@@ -699,7 +699,7 @@ $xml = loadFromXML();
 									?>
 
 									<div class="clearfix first-line">
-										<h1 class="heading weight-bold">Unsere Kostenschätzung für Ihr Projekt - Website</h1>
+										<h1 class="heading weight-bold"><?php if($lang){ ?>Unsere Kostenschätzung für Ihr Projekt <?php }else{ ?>OUR ESTIMATE FOR YOUR PROJECT <?php }?>- Website</h1>
 										<!-- <a href="#" class="btn btn-small btn-primary" id="share" title="Share your estimate and scope with a friend">Share</a> -->
 									</div> <!-- close .clearfix -->
 									<ul class="unstyled js-scope">
@@ -714,12 +714,12 @@ $xml = loadFromXML();
 										</li>
 									</ul>
 									<hr>
-									<h1 class="descriptor">Geschätzte Kosten:</h1>
+									<h1 class="descriptor"><?php if($lang){ ?>Geschätzte Kosten:<?php }else{ ?>ESTIMATED COSTS:<?php }?></h1>
 									<h1 class="total">&euro;<span class="data">1000</span><span class="label-price"></span></h1>
 									<br>
 									
 									<div class="result-block">
-										<img src="img/bg-result.png" alt="text">
+										<?php if($lang){ ?><img src="img/bg-result.png" alt="text"><?php }else{ ?><img src="img/kontaktieren.png" alt=""/><?php }?>
 									</div>
 									<div class="helper" id="result">
 										<form action="" method="post" id="submitForm" onsubmit='return false;' name="mc-embedded-subscribe-form" class="validate subscribe-form">
@@ -727,19 +727,19 @@ $xml = loadFromXML();
 											<?php echo isset($_POST['features']) ? "<input type='hidden' name='obudget' value='$_POST[budget]'>" : ""; ?>
 											<?php echo isset($_POST['features']) ? "<input type='hidden' name='beforeDesc' value='$_POST[description]/-/$_POST[descriptions]'>" : ""; ?>
 											<input type="hidden" value="sendMail" name="send">
-											<input type="text" value="" name="ClientName" class="required inputtext"  placeholder="Ihr Name">
-											<input type="text" value="" name="EMAIL" class="required email"  placeholder="Ihre E-Mail Adresse">
-											<textarea name="mess" placeholder="Ihre Nachricht an uns."></textarea>
-											<button type="submit" href="#" class="btn btn-block btn-danger" onclick="_gaq.push(['_trackEvent', 'PCalculator', 'CalcClick', 'C3CalcSubmit', time]);">Absenden</button>
+											<input type="text" value="" name="ClientName" class="required inputtext"  placeholder="<?php if($lang){ ?>Ihr Name<?php }else{ ?>Name<?php }?>">
+											<input type="text" value="" name="EMAIL" class="required email"  placeholder="<?php if($lang){ ?>Ihre E-Mail Adresse<?php }else{ ?>Email<?php }?>">
+											<textarea name="mess" placeholder="<?php if($lang){ ?>Ihre Nachricht an uns.<?php }else{ ?>Message<?php }?>"></textarea>
+											<button type="submit" href="#" class="btn btn-block btn-danger" onclick="_gaq.push(['_trackEvent', 'PCalculator', 'CalcClick', 'C3CalcSubmit', time]);"><?php if($lang){ ?>Absenden<?php }else{ ?>SUBMIT YOUR PROJECT<?php }?></button>
 										</form>
 									</div> <!-- close .helper -->
-									<p class="light" style="margin-top: 10px; margin-bottom: 0; text-align: right; font-size: 12px; font-style: italic;"><a href="index.php">Noch einmal / Ein anderes Projekt durchrechnen</a></p>
+									<p class="light" style="margin-top: 10px; margin-bottom: 0; text-align: right; font-size: 12px; font-style: italic;"><a href="index.php"><?php if($lang){ ?>Noch einmal / Ein anderes Projekt durchrechnen<?php }else{ ?>Estimate another project<?php }?></a></p>
 									<br>
 									<div class="foot-winify">
 										<a href="/" onclick="_gaq.push(['_trackEvent', 'PCalculator', 'CalcClick', 'C3WinifyHomeFt', time]);"><img src="img/winify-color.png"></a>
 									</div>
 									<div class="contact">
-										<p><strong>Kontakt:</strong></p>
+										<p><strong><?php if($lang){ ?>Kontakt:<?php }else{ ?>Contact:<?php }?></strong></p>
 										<p>+41 41 511 2684 (Schweiz)</p>
 										<p>+49 177 88 458 12 (Deutschland)</p>
 									</div>
