@@ -906,7 +906,7 @@ if ($app == "web") {
 									<br>							
 
 									<div class="result-block">
-										<img src="img/bg-result.png" alt="text">
+										<?php if($lang){ ?><img src="img/bg-result.png" alt="text"><?php }else{ ?><img src="img/kontaktieren.png" alt=""/><?php }?>
 									</div>
 									<div class="helper" id="result">
 										<form action="" method="post" id="submitForm"  onsubmit='return false;' name="mc-embedded-subscribe-form" class="validate subscribe-form">
