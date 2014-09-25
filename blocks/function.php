@@ -15,7 +15,16 @@ function saveChangeInXML($quest, $data, $count) {
 	$edit = 0;
 
 	if (file_exists('quest.xml')) {
-		$xml = simplexml_load_file('quest.xml');
+		$actual_link = "$_SERVER[REQUEST_URI]";
+		if (strpos($actual_link, 'de') !== false) {
+			if (file_exists('quest.xml')) {
+				$xml = simplexml_load_file('quest.xml');
+			}
+		} else {
+			if (file_exists('quest-en.xml')) {
+				$xml = simplexml_load_file('quest-en.xml');
+			}
+		}
 
 		if ($data[$quest]['title'] != "") {
 			if ($xml->$quest->title != $data[$quest]['title']) {
@@ -67,7 +76,13 @@ function saveChangeInXML($quest, $data, $count) {
 	}
 
 	if ($edit == 1) {
-		return $xml->saveXML('quest.xml');
+		$actual_link = "$_SERVER[REQUEST_URI]";
+		if (strpos($actual_link, 'de') !== false) {
+			return $xml->saveXML('quest.xml');
+		} else {
+			return $xml->saveXML('quest-en.xml');
+		}
+		
 	} else {
 		return 0;
 	}
@@ -79,11 +94,14 @@ function saveChangeInXML($quest, $data, $count) {
 function saveNewPrice($p) {
 	if (file_exists('quest.xml')) {
 		$xml = simplexml_load_file('quest.xml');
+		$xml2 = simplexml_load_file('quest-en.xml');
+		
 		$xml->price = $p;
+		$xml2->price = $p;
 	} else {
 		exit("Failed to open xml");
 	}
-
+	$xml2->asXML('quest-en.xml');
 	return $xml->asXML('quest.xml');
 }
 
@@ -144,7 +162,7 @@ function readPost($quest, $countAnswer) {
 
 function makeMail($data, $arr) {
 	if (file_exists('quest.xml')) {
-		
+
 		$actual_link = "$_SERVER[REQUEST_URI]";
 		if (strpos($actual_link, 'de') !== false) {
 			if (file_exists('quest.xml')) {
