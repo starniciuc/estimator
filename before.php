@@ -33,8 +33,8 @@
 <?php }?>
 </ul>
 <hr>
-<h1 class="descriptor"><?php if($lang){ ?>Geschätzte Kosten:<?php }else{ ?>ESTIMATED COSTS:<?php }?>: </h1>
-<h1 class="total">&euro;<span><?php echo $_POST['budget'];?></span><span class="label-price"></span></h1>
+<h1 class="descriptor"><?php if($lang){ ?>Geschätzte Kosten:<?php }else{ ?>ESTIMATED COSTS:<?php }?></h1>
+<h1 class="total">&euro;<span class="data"><?php echo $_POST['budget'];?></span><span class="label-price"></span></h1>
 <br>
 <br>
 <br>
