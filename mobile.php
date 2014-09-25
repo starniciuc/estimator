@@ -886,7 +886,7 @@ if ($app == "web") {
 }
 ?>
 									<div class="clearfix first-line">
-										<h1 class="heading weight-bold">Unsere Kostenschätzung für Ihr Projekt - Mobile Application</h1>
+										<h1 class="heading weight-bold"><?php if($lang){ ?>Unsere Kostenschätzung für Ihr Projekt <?php }else{ ?>OUR ESTIMATE FOR YOUR PROJECT <?php }?>- Mobile Application</h1>
 										<!-- <a href="#" class="btn btn-small btn-primary" id="share" title="Share your estimate and scope with a friend">Share</a> -->
 									</div> <!-- close .clearfix -->
 									<ul class="unstyled js-scope">
@@ -901,7 +901,7 @@ if ($app == "web") {
 										</li>
 									</ul>
 									<hr>
-									<h1 class="descriptor"><?php if($lang){ ?>Geschätzte Kosten:<?php }else{ ?>Geschätzte Kosten:<?php }?></h1>
+									<h1 class="descriptor"><?php if($lang){ ?>Geschätzte Kosten:<?php }else{ ?>ESTIMATED COSTS:<?php }?></h1>
 									<h1 class="total">&euro;<span class="data">1000</span><span class="label-price"></span></h1>
 									<br>							
 
