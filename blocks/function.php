@@ -1,7 +1,7 @@
 <?php
 
-error_reporting(E_ERROR | E_WARNING | E_PARS);
-ini_set("display_errors", 1);
+//error_reporting(E_ERROR | E_WARNING | E_PARS);
+//ini_set("display_errors", 0);
 
 function questChange($quest) {
 	setcookie("SaveChange", $quest, time() + 300);
