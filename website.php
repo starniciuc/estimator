@@ -234,27 +234,48 @@ $xml = loadFromXML();
 								<div class="row-fluid">
 									<div class="span2">
 										<div class="descrip">
-											<p>Ein Internet Auftritt mit Multimedia Funktionalitäten.</p>
+											<?php if($lang){ ?>
+												<p>Ein Internet Auftritt mit Multimedia Funktionalitäten.</p>
+											<?php }else{ ?>
+												<p>An internet presence with multimedia features.</p>
+											<?php }?>
 										</div>
 									</div>
 									<div class="span2">
 										<div class="descrip">
-											<p>Eine Webseite, auf der das Kaufen und Verkaufen von digitalen und physischen Waren möglich ist. User Management und Bezahlmöglichkeiten sind enthalten.</p>
+											<?php if($lang){ ?>
+												<p>Eine Webseite, auf der das Kaufen und Verkaufen von digitalen und physischen Waren möglich ist. User Management und Bezahlmöglichkeiten sind enthalten.</p>
+											<?php }else{ ?>
+												<p>A website where you can buy and sell digital as well as physical goods. User management and payment options are included.</p>
+											<?php }?>
 										</div>
 									</div>
 									<div class="span2">
 										<div class="descrip">
-											<p>Eine dynamische Webseite, die verschiedene Möglichkeiten bietet, mit dem User zu interagieren. User können Kundenkonten anlegen und untereinander in Kontakt treten.</p>
+											<?php if($lang){ ?>
+												<p>Eine dynamische Webseite, die verschiedene Möglichkeiten bietet, mit dem User zu interagieren. User können Kundenkonten anlegen und untereinander in Kontakt treten.</p>
+											<?php }else{ ?>
+												<p>A dynamic website which allows you to interact with the users. Users can create their own accounts and contact each other.</p>
+											<?php }?>
 										</div>
 									</div>
 									<div class="span2">
 										<div class="descrip">
-											<p>Ein Web Portal mit umfangreichen dynamischen Elementen. User Management und Bezahlmöglichkeiten sind enthalten.</p>
+											<?php if($lang){ ?>
+												<p>Ein Web Portal mit umfangreichen dynamischen Elementen. User Management und Bezahlmöglichkeiten sind enthalten.</p>
+											<?php }else{ ?>
+												<p>A web portal with numerous dynamic elements. User management and payment options are included.</p>
+											<?php }?>
+											
 										</div>
 									</div>						
 									<div class="span2">
 										<div class="descrip">
-											<p>Ich habe etwas ganz anderes vor oder würde gerne Teile der genannten Möglichkeiten mischen.</p>
+											<?php if($lang){ ?>
+												<p>Ich habe etwas ganz anderes vor oder würde gerne Teile der genannten Möglichkeiten mischen.</p>
+											<?php }else{ ?>
+												<p>I have something completely different in mind and would like to merge some of the mentioned options.</p>
+											<?php }?>
 										</div>
 									</div>
 								</div>
