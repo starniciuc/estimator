@@ -80,7 +80,7 @@
 <body>
 	<div class="wrapper">
 		<div class="logo-winify">
-			<a href="/" onclick="_gaq.push(['_trackEvent', 'PCalculator', 'CalcClick', 'C2WinifyHome', wtime]);" ><img src="img/sur.1.png"></a>
+			<a href="/<?php if(!$lang){?>en<?php }?>" onclick="_gaq.push(['_trackEvent', 'PCalculator', 'CalcClick', 'C2WinifyHome', wtime]);" ><img src="img/sur.1.png"></a>
 		</div>
 		<div class="header"></div>
 		<div class="indexContent">

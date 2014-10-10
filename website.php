@@ -112,7 +112,7 @@ $xml = loadFromXML();
 		<div class="table-wrapper">
 
 			<div class="logo-winify">
-				<a href="/" onclick="_gaq.push(['_trackEvent', 'PCalculator', 'CalcClick', 'C2WinifyHome', wtime]);"><img src="img/sur.1.png"></a>
+				<a href="/<?php if(!$lang){?>en<?php }?>" onclick="_gaq.push(['_trackEvent', 'PCalculator', 'CalcClick', 'C2WinifyHome', wtime]);"><img src="img/sur.1.png"></a>
 			</div>
 
 			<div class="cell-wrapper">
@@ -710,7 +710,7 @@ $xml = loadFromXML();
 							<div id="estimate">
 								<div class="invoice well">
 									<div class="head-winify">
-										<a href="/" onclick="_gaq.push(['_trackEvent', 'PCalculator', 'CalcClick', 'C3WinifyHomeHd', time]);"><img src="img/winify-color.png"></a>
+										<a href="/<?php if(!$lang){?>en<?php }?>" onclick="_gaq.push(['_trackEvent', 'PCalculator', 'CalcClick', 'C3WinifyHomeHd', time]);"><img src="img/winify-color.png"></a>
 										<hr>
 									</div>
 									<?php
@@ -757,7 +757,7 @@ $xml = loadFromXML();
 									<p class="light" style="margin-top: 10px; margin-bottom: 0; text-align: right; font-size: 12px; font-style: italic;"><a href="index.php"><?php if($lang){ ?>Noch einmal / Ein anderes Projekt durchrechnen<?php }else{ ?>Estimate another project<?php }?></a></p>
 									<br>
 									<div class="foot-winify">
-										<a href="/" onclick="_gaq.push(['_trackEvent', 'PCalculator', 'CalcClick', 'C3WinifyHomeFt', time]);"><img src="img/winify-color.png"></a>
+										<a href="/<?php if(!$lang){?>en<?php }?>" onclick="_gaq.push(['_trackEvent', 'PCalculator', 'CalcClick', 'C3WinifyHomeFt', time]);"><img src="img/winify-color.png"></a>
 									</div>
 									<div class="contact">
 										<p><strong><?php if($lang){ ?>Kontakt:<?php }else{ ?>Contact:<?php }?></strong></p>
