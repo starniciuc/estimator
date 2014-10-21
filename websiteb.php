@@ -40,11 +40,12 @@ $xml = loadFromXML();
 							url: "estimate.php",
 							data: $("#submitForm").serialize(),
 							beforeSend: function() {
-								$('#result').html('<img src="img/ajax_loader.gif" />');
+								$('#result').empty();
+								$('.message-block').html('<img src="img/ajax_loader.gif" />');
 							},
 							success: function() {
 								setTimeout(function() {
-									$('#result').html("Wir haben Ihre Nachricht erhalten!");
+									$('.message-block').html("Wir haben Ihre Nachricht erhalten!");
 								}, 3000)
 							}
 						});
@@ -742,7 +743,8 @@ $xml = loadFromXML();
 									 * 
 									 */?>
 									<div class="message-block">
-										Bitte senden Sie uns Ihre E-mail Adresse. Wir antworten umgehend mit dem Ergebnis.
+										<?php if(!$lang){?>en<?php }?>Bitte senden Sie uns Ihre E-mail Adresse. Wir antworten umgehend mit dem Ergebnis.<?php }else{ ?>
+										Please send us your e-mail address. We will reply promptly with the result. <?php }?>
 									</div>
 									<div class="helper" id="result">
 										<form action="" method="post" id="submitForm" onsubmit='return false;' name="mc-embedded-subscribe-form" class="validate subscribe-form">
