@@ -41,6 +41,8 @@ $xml = loadFromXML();
 		<script src="js/jquery.validate.js" type="text/javascript"></script>
 		<script type="text/javascript">
 			var pth = parseInt('<?php echo $xml->price; ?>');
+			var textMessage = <?php if($lang){ ?>"Wir haben Ihre Nachricht erhalten!";<?php }else{ ?>"We have received your message!";<?php }?>
+			
 			$().ready(function() {
 				// validate signup form on keyup and submit
 				$("#submitForm").validate({
@@ -71,7 +73,7 @@ $xml = loadFromXML();
 							},
 							success: function() {
 								setTimeout(function() {
-									$('#result').html("Wir haben Ihre Nachricht erhalten!");
+									$('#result').html(textMessage);
 								}, 3000)
 							}
 						});
