@@ -920,7 +920,7 @@ if ($app == "web") {
 											<input type="text" value="" name="ClientName" class="required inputtext"  placeholder="<?php if($lang){ ?>Ihr Name<?php }else{ ?>Name<?php }?>">
 											<input type="text" value="" name="EMAIL" class="required email"  placeholder="<?php if($lang){ ?>Ihre E-Mail Adresse<?php }else{ ?>Email<?php }?>">
 											
-											<button type="submit" href="#" class="btn btn-block btn-danger" onclick="_gaq.push(['_trackEvent', 'PCalculator', 'CalcClick', 'C3CalcSubmit', time]);"><?php if($lang){ ?>Absenden & Ergebnis erhalten<?php }else{ ?>Submit & Get result<?php }?></button>
+											<button type="submit" href="#" class="btn btn-block btn-danger" onclick="_gaq.push(['_trackEvent', 'MobileRep', 'Click', 'MobileRepSubmit', 1]);"><?php if($lang){ ?>Absenden & Ergebnis erhalten<?php }else{ ?>Submit & Get result<?php }?></button>
 										</form>
 									</div> <!-- close .helper -->
 									<p class="light" style="margin-top: 10px; margin-bottom: 0; text-align: right; font-size: 12px; font-style: italic;"><a href="index.php"><?php if($lang){ ?>Noch einmal / Ein anderes Projekt durchrechnen<?php }else{ ?>Estimate another project<?php }?></a></p>
