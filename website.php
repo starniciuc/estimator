@@ -1,5 +1,12 @@
 <?php
 include "blocks/function.php";
+$actual_link = "$_SERVER[REQUEST_URI]";
+$lang = true;
+if (strpos($actual_link, 'de') !== false) {
+	$lang = true;
+} else {
+	$lang = false;
+}
 $xml = loadFromXML();
 @$app = $_POST['dir'] ? $_POST['dir'] : "";
 ?>
