@@ -484,7 +484,7 @@ function makeMail($data, $arr) {
 	return $message;
 }
 
-function sender($m, $email, $v2 = false) {
+function sender($m, $email, $v2) {
 	$headers = 'MIME-Version: 1.0' . "\r\n";
 	$headers .= 'Content-type: text/html;  charset=UTF-8' . "\r\n";
 	$subject =  $v2?"Estimate your project. Winify-B":"Estimate your project. Winify";
