@@ -52,7 +52,7 @@ $xml = loadFromXML();
 							},
 							success: function() {
 								setTimeout(function() {
-									$('#result').html();
+									$('#result').empty();
 									$('.message-block').html(textMessage);
 								}, 3000)
 							}
