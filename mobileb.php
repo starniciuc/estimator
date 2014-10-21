@@ -25,6 +25,7 @@ $xml = loadFromXML();
 		<script src="js/jquery.validate.js" type="text/javascript"></script>
 		<script type="text/javascript">
 			var pth = parseInt('<?php echo $xml->price; ?>');
+			var textMessage = <?php if($lang){ ?>"Wir haben Ihre Nachricht erhalten!";<?php }else{ ?>"We have received your message!";<?php }?>
 			$().ready(function() {
 				// validate signup form on keyup and submit
 				$("#submitForm").validate({
@@ -51,7 +52,8 @@ $xml = loadFromXML();
 							},
 							success: function() {
 								setTimeout(function() {
-									$('#result').html("Wir haben Ihre Nachricht erhalten!");
+									$('#result').empty();
+									$('.message-block').html(textMessage);
 								}, 3000)
 							}
 						});
@@ -106,7 +108,24 @@ $xml = loadFromXML();
 			ga('create', 'UA-52113605-1', 'auto');
 
 			ga('send', 'pageview');
+			
 		</script>
+		<?php if(!$lang){?>
+		<!-- Google Analytics Content Experiment code -->
+		<script>function utmx_section(){}function utmx(){}(function(){var
+		k='87912327-0',d=document,l=d.location,c=d.cookie;
+		if(l.search.indexOf('utm_expid='+k)>0)return;
+		function f(n){if(c){var i=c.indexOf(n+'=');if(i>-1){var j=c.
+		indexOf(';',i);return escape(c.substring(i+n.length+1,j<0?c.
+		length:j))}}}var x=f('__utmx'),xx=f('__utmxx'),h=l.hash;d.write(
+		'<sc'+'ript src="'+'http'+(l.protocol=='https:'?'s://ssl':
+		'://www')+'.google-analytics.com/ga_exp.js?'+'utmxkey='+k+
+		'&utmx='+(x?x:'')+'&utmxx='+(xx?xx:'')+'&utmxtime='+new Date().
+		valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+
+		'" type="text/javascript" charset="utf-8"><\/sc'+'ript>')})();
+		</script><script>utmx('url','A/B');</script>
+		<!-- End of Google Analytics Content Experiment code -->
+		<?php }?>
 	</head>
 
 	<body class="no-underline">
@@ -907,7 +926,11 @@ if ($app == "web") {
 									 * 
 									 */?>
 									<div class="message-block">
-										Bitte senden Sie uns Ihre E-mail Adresse. Wir antworten umgehend mit dem Ergebnis.
+										<?php if($lang){ ?>
+											Bitte senden Sie uns Ihre E-mail Adresse. Wir antworten umgehend mit dem Ergebnis.
+										<?php }else{ ?>
+											Please send us your e-mail address. We will reply promptly with the result. 
+										<?php }?>
 									</div>
 									<div class="helper" id="result">
 										<form action="" method="post" id="submitForm"  onsubmit='return false;' name="mc-embedded-subscribe-form" class="validate subscribe-form">
