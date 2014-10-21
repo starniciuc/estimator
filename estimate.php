@@ -25,7 +25,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" && $_POST['send'] == 'sendMail') {
 	);
 	$message .= makeMail($select, $arr);
 	$message .= "</body></html>";
-
-	sender($message, $_POST['EMAIL']);
+	$ver = $_POST['versionB'] ? true : false;
+	sender($message, $_POST['EMAIL'], $ver);
 }
 ?>

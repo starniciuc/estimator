@@ -52,15 +52,8 @@
 				m.parentNode.insertBefore(a, m)
 
 			})(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
-
-
-
 			ga('create', 'UA-52113605-1', 'auto');
-
 			ga('send', 'pageview');
-
-
-
 		</script>
 		<script>
 				var time = 0;

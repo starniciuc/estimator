@@ -484,14 +484,14 @@ function makeMail($data, $arr) {
 	return $message;
 }
 
-function sender($m, $email) {
+function sender($m, $email, $v2 = false) {
 	$headers = 'MIME-Version: 1.0' . "\r\n";
 	$headers .= 'Content-type: text/html;  charset=UTF-8' . "\r\n";
-
+	$subject =  $v2?"Estimate your project. Winify-B":"Estimate your project. Winify";
 	if (isset($m)) {
-		if (mail("mailto:customer@winify.com", "Estimate your project. Winify", $m, $headers)) {
+		if (mail("mailto:customer@winify.com", $subject , $m, $headers)) {
 			mail($email, "Estimate your project. Winify", $m, $headers);
-			mail("sb@winify.com", "Estimate your project. Winify", $m, $headers);
+			mail("sb@winify.com", $subject, $m, $headers);
 			//header("LOCATION: index.php");
 		}
 	}
