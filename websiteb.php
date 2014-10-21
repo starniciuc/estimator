@@ -52,7 +52,14 @@ $xml = loadFromXML();
 							},
 							success: function() {
 								setTimeout(function() {
-									$('.message-block').html("<?php if(!$lang){?>We have received your message!<?php }else{?>Wir haben Ihre Nachricht erhalten!<?php}?>");
+									$('.message-block').html("
+										<?php if($lang){ ?>
+											Wir haben Ihre Nachricht erhalten!
+										<?php }else{ ?>
+											We have received your message!
+										<?php }?>
+											
+										");
 								}, 3000)
 							}
 						});
@@ -750,8 +757,11 @@ $xml = loadFromXML();
 									 * 
 									 */?>
 									<div class="message-block">
-										<?php if($lang){?>Bitte senden Sie uns Ihre E-mail Adresse. Wir antworten umgehend mit dem Ergebnis.<?php }else{ ?>
-										Please send us your e-mail address. We will reply promptly with the result. <?php }?>
+										<?php if($lang){ ?>
+											Bitte senden Sie uns Ihre E-mail Adresse. Wir antworten umgehend mit dem Ergebnis.
+										<?php }else{ ?>
+											Please send us your e-mail address. We will reply promptly with the result. 
+										<?php }?>
 									</div>
 									<div class="helper" id="result">
 										<form action="" method="post" id="submitForm" onsubmit='return false;' name="mc-embedded-subscribe-form" class="validate subscribe-form">
