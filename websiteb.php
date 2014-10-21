@@ -750,7 +750,7 @@ $xml = loadFromXML();
 									 * 
 									 */?>
 									<div class="message-block">
-										<?php if(!$lang){?>en<?php }?>Bitte senden Sie uns Ihre E-mail Adresse. Wir antworten umgehend mit dem Ergebnis.<?php }else{ ?>
+										<?php if($lang){?>Bitte senden Sie uns Ihre E-mail Adresse. Wir antworten umgehend mit dem Ergebnis.<?php }else{ ?>
 										Please send us your e-mail address. We will reply promptly with the result. <?php }?>
 									</div>
 									<div class="helper" id="result">
