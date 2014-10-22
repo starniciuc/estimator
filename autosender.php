@@ -11,6 +11,7 @@ $selectedDesc .= isset($_POST['valuesDesc']) ? $_POST['valuesDesc'] : "";
 $sel_desc = explode('/-/', $selectedDesc);
 $sel = explode('/-/', $selected);
 $select = array_combine($sel_desc, $sel);
+
 $arr = array(
 	'name' => $_SERVER['HTTP_X_FORWARDED_FOR'],
 	'email' => "no-email",

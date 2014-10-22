@@ -195,7 +195,7 @@ function makeMail($data, $arr) {
 
 		foreach ($data as $title => $reply) {
 
-			if ($xml->device->title == $title) {
+			if ($xml->device->description == $title) {
 				$all = "";
 				for ($j = 1; $j <= 5; $j++) {
 					$a = "answer$j";
@@ -211,7 +211,8 @@ function makeMail($data, $arr) {
 						. "<td  style='border-bottom:1px dotted #aaa; padding:5px;'>" . $all . "</td>"
 						. "</tr>";
 			}
-			if ($xml->type->title == $title) {
+			
+			if ($xml->type->description == $title) {
 				$all = "";
 				for ($j = 1; $j <= 5; $j++) {
 					$a = "answer$j";
@@ -232,7 +233,8 @@ function makeMail($data, $arr) {
 						. "<td style='border-bottom:1px dotted #aaa; padding:5px;'>" . $all . "</td>"
 						. "</tr>";
 			}
-			if ($xml->payments->title == $title) {
+			
+			if ($xml->payments->description == $title) {
 				$all = "";
 				for ($j = 1; $j <= 5; $j++) {
 					$a = "answer$j";
@@ -248,7 +250,7 @@ function makeMail($data, $arr) {
 						. "<td  style='border-bottom:1px dotted #aaa;'>" . $all . "</td>"
 						. "</tr>";
 			}
-			if ($xml->login->title == $title) {
+			if ($xml->login->description == $title) {
 				$all = "";
 				for ($j = 1; $j <= 5; $j++) {
 					$a = "answer$j";
@@ -265,7 +267,7 @@ function makeMail($data, $arr) {
 						. "</tr>";
 			}
 
-			if ($xml->sync->title == $title) {
+			if ($xml->sync->description == $title) {
 				$all = "";
 				for ($j = 1; $j <= 5; $j++) {
 					$a = "answer$j";
@@ -281,7 +283,7 @@ function makeMail($data, $arr) {
 						. "<td  style='border-bottom:1px dotted #aaa;'>" . $all . "</td>"
 						. "</tr>";
 			}
-			if ($xml->rate->title == $title) {
+			if ($xml->rate->description == $title) {
 				$all = "";
 				for ($j = 1; $j <= 5; $j++) {
 					$a = "answer$j";
@@ -297,7 +299,7 @@ function makeMail($data, $arr) {
 						. "<td  style='border-bottom:1px dotted #aaa;'>" . $all . "</td>"
 						. "</tr>";
 			}
-			if ($xml->graphics->title == $title) {
+			if ($xml->graphics->description == $title) {
 				$all = "";
 				for ($j = 1; $j <= 5; $j++) {
 					$a = "answer$j";
@@ -313,7 +315,7 @@ function makeMail($data, $arr) {
 						. "<td  style='border-bottom:1px dotted #aaa;'>" . $all . "</td>"
 						. "</tr>";
 			}
-			if ($xml->profiles->title == $title) {
+			if ($xml->profiles->description == $title) {
 				$all = "";
 				for ($j = 1; $j <= 5; $j++) {
 					$a = "answer$j";
@@ -329,7 +331,7 @@ function makeMail($data, $arr) {
 						. "<td  style='border-bottom:1px dotted #aaa;'>" . $all . "</td>"
 						. "</tr>";
 			}
-			if ($xml->project->title == $title) {
+			if ($xml->project->description == $title) {
 				$all = "";
 				for ($j = 1; $j <= 5; $j++) {
 					$a = "answer$j";
@@ -345,7 +347,7 @@ function makeMail($data, $arr) {
 						. "<td  style='border-bottom:1px dotted #aaa;'>" . $all . "</td>"
 						. "</tr>";
 			}
-			if ($xml->website->title == $title) {
+			if ($xml->website->description == $title) {
 				$all = "";
 				for ($j = 1; $j <= 5; $j++) {
 					$a = "answer$j";
@@ -361,7 +363,7 @@ function makeMail($data, $arr) {
 						. "<td  style='border-bottom:1px dotted #aaa;'>" . $all . "</td>"
 						. "</tr>";
 			}
-			if ($xml->wtype->title == $title) {
+			if ($xml->wtype->description == $title) {
 				$all = "";
 				for ($j = 1; $j <= 5; $j++) {
 					$a = "answer$j";
@@ -383,7 +385,7 @@ function makeMail($data, $arr) {
 						. "<td style='border-bottom:1px dotted #aaa;'>" . $all . "</td>"
 						. "</tr>";
 			}
-			if ($xml->based->title == $title) {
+			if ($xml->based->description == $title) {
 				$all = "";
 				for ($j = 1; $j <= 5; $j++) {
 					$a = "answer$j";
@@ -399,7 +401,7 @@ function makeMail($data, $arr) {
 						. "<td  style='border-bottom:1px dotted #aaa;'>" . $all . "</td>"
 						. "</tr>";
 			}
-			if ($xml->languages->title == $title) {
+			if ($xml->languages->description == $title) {
 				$all = "";
 				for ($j = 1; $j <= 5; $j++) {
 					$a = "answer$j";
@@ -415,7 +417,7 @@ function makeMail($data, $arr) {
 						. "<td  style='border-bottom:1px dotted #aaa;'>" . $all . "</td>"
 						. "</tr>";
 			}
-			if ($xml->responsive->title == $title) {
+			if ($xml->responsive->description == $title) {
 				$all = "";
 				for ($j = 1; $j <= 5; $j++) {
 					$a = "answer$j";
@@ -431,7 +433,7 @@ function makeMail($data, $arr) {
 						. "<td  style='border-bottom:1px dotted #aaa; '>" . $all . "</td>"
 						. "</tr>";
 			}
-			if ($xml->design->title == $title) {
+			if ($xml->design->description == $title) {
 				$all = "";
 				for ($j = 1; $j <= 5; $j++) {
 					$a = "answer$j";
@@ -447,7 +449,7 @@ function makeMail($data, $arr) {
 						. "<td  style='border-bottom:1px dotted #aaa;'>" . $all . "</td>"
 						. "</tr>";
 			}
-			if ($xml->marketing->title == $title) {
+			if ($xml->marketing->description == $title) {
 				$all = "";
 				for ($j = 1; $j <= 5; $j++) {
 					$a = "answer$j";
@@ -463,7 +465,7 @@ function makeMail($data, $arr) {
 						. "<td  style='border-bottom:1px dotted #aaa;'>" . $all . "</td>"
 						. "</tr>";
 			}
-			if ($xml->interface->title == $title) {
+			if ($xml->interface->description == $title) {
 				$all = " ";
 				for ($j = 1; $j <= 5; $j++) {
 					$a = "answer$j";
