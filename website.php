@@ -40,7 +40,8 @@ $xml = loadFromXML();
 		<script src="js/jquery.validate.js" type="text/javascript"></script>
 		<script type="text/javascript">
 			var pth = parseInt('<?php echo $xml->price; ?>');
-			var textMessage = <?php if($lang){ ?>"Wir haben Ihre Nachricht erhalten!";<?php }else{ ?>"We have received your message!";<?php }?>
+			var textMessage = <?php if($lang){ ?>"Vielen Dank!<br> Wir haben Ihre Nachricht erhalten und werden Ihnen in Kürze antworten.
+";<?php }else{ ?>"Thanks, We have received your message!<br> We'll get back to you soon ";<?php }?>
 			
 			$().ready(function() {
 				// validate signup form on keyup and submit
@@ -72,7 +73,9 @@ $xml = loadFromXML();
 							},
 							success: function() {
 								setTimeout(function() {
-									$('#result').html(textMessage);
+									$('.result-block').slideUp();
+									$('.message-block').html(textMessage);
+									$('.message-block').slideDown();
 								}, 300)
 							}
 						});
@@ -766,6 +769,9 @@ $xml = loadFromXML();
 									
 									<div class="result-block">
 										<?php if($lang){ ?><img src="img/bg-result.png" alt="text"><?php }else{ ?><img src="img/kontaktieren.png" alt=""/><?php }?>
+									</div>
+									<div class="message-block" style="display: none;">
+										
 									</div>
 									<div class="helper" id="result">
 										<form action="" method="post" id="submitForm" onsubmit='return false;' name="mc-embedded-subscribe-form" class="validate subscribe-form">
