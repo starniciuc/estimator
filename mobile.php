@@ -74,7 +74,7 @@ $xml = loadFromXML();
 							success: function() {
 								setTimeout(function() {
 									$('#result').html(textMessage);
-								}, 3000)
+								}, 300)
 							}
 						});
 					}

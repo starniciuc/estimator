@@ -24,7 +24,7 @@ $xml = loadFromXML();
 		<script src="js/jquery.validate.js" type="text/javascript"></script>
 		<script type="text/javascript">
 			var pth = parseInt('<?php echo $xml->price; ?>');
-			var textMessage = <?php if($lang){ ?>"Vielen Dank! Wir haben Ihre Nachricht erhalten und werden Ihnen in Kürze antworten.";<?php }else{ ?>"Thanks, We have received your message! We will reply promptly with the result.";<?php }?>
+			var textMessage = <?php if($lang){ ?>"Vielen Dank!<br> Wir haben Ihre Nachricht erhalten und werden Ihnen in Kürze antworten.";<?php }else{ ?>"Thanks, We have received your message!<br> We will reply promptly with the result.";<?php }?>
 			$().ready(function() {
 				// validate signup form on keyup and submit
 				$("#submitForm").validate({
@@ -53,7 +53,7 @@ $xml = loadFromXML();
 								setTimeout(function() {
 									$('#result').empty();
 									$('.message-block').html(textMessage);
-								}, 3000)
+								}, 300)
 							}
 						});
 					}
@@ -752,9 +752,9 @@ $xml = loadFromXML();
 									 */?>
 									<div class="message-block">
 										<?php if($lang){ ?>
-											Bitte senden Sie uns Ihre E-mail Adresse. Wir antworten umgehend mit dem Ergebnis.
+										Bitte senden Sie uns Ihre E-mail Adresse.<br> Wir antworten umgehend mit dem Ergebnis.
 										<?php }else{ ?>
-											Please send us your e-mail address. We will reply promptly with the result. 
+										Please send us your e-mail address.<br> We will reply promptly with the result. 
 										<?php }?>
 									</div>
 									<div class="helper" id="result">
