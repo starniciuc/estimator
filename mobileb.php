@@ -912,7 +912,7 @@ if ($app == "web") {
 									 */?>
 									<div class="message-block">
 										<?php if($lang){ ?>
-										Bitte senden Sie uns Ihre E-mail Adresse.<br> Wir antworten umgehend mit dem Ergebnis.
+										Bitte senden Sie uns Ihre E-Mail Adresse.<br> Wir antworten umgehend mit dem Ergebnis.
 										<?php }else{ ?>
 										Please send us your e-mail address.<br> We will reply promptly with the result. 
 										<?php }?>
