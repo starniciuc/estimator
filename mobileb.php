@@ -924,7 +924,7 @@ if ($app == "web") {
 											<?php echo isset($_POST['features']) ? "<input type='hidden' name='obudget' value='$_POST[budget]'>" : ""; ?>
 											<input type="hidden" value="1" name="type">
 											<input type="hidden" value="sendMail" name="send">
-											<input type="hidden" value="versionB" name="true">
+											<input type="hidden" value="true" name="versionB">
 											<input type="text" value="" name="ClientName" class="required inputtext"  placeholder="<?php if($lang){ ?>Ihr Name<?php }else{ ?>Name<?php }?>">
 											<input type="text" value="" name="EMAIL" class="required email"  placeholder="<?php if($lang){ ?>Ihre E-Mail Adresse<?php }else{ ?>Email<?php }?>">
 											

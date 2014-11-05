@@ -494,7 +494,7 @@ function sender($m, $email, $v2) {
 		if (mail("mailto:customer@winify.com", $subject , $m, $headers)) {
 			mail($email, "Estimate your project. Winify", $m, $headers);
 			mail("sb@winify.com", $subject, $m, $headers);
-			echo "success";
+			echo $subject;
 			//header("LOCATION: index.php");
 		}
 	}
