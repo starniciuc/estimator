@@ -14,22 +14,6 @@ $xml = loadFromXML();
 <html>
 
 	<head>
-		<?php if(!$lang){?>
-		<!-- Google Analytics Content Experiment code -->
-		<script>function utmx_section(){}function utmx(){}(function(){var
-		k='87912327-1',d=document,l=d.location,c=d.cookie;
-		if(l.search.indexOf('utm_expid='+k)>0)return;
-		function f(n){if(c){var i=c.indexOf(n+'=');if(i>-1){var j=c.
-		indexOf(';',i);return escape(c.substring(i+n.length+1,j<0?c.
-		length:j))}}}var x=f('__utmx'),xx=f('__utmxx'),h=l.hash;d.write(
-		'<sc'+'ript src="'+'http'+(l.protocol=='https:'?'s://ssl':
-		'://www')+'.google-analytics.com/ga_exp.js?'+'utmxkey='+k+
-		'&utmx='+(x?x:'')+'&utmxx='+(xx?xx:'')+'&utmxtime='+new Date().
-		valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+
-		'" type="text/javascript" charset="utf-8"><\/sc'+'ript>')})();
-		</script><script>utmx('url','A/B');</script>
-		<!-- End of Google Analytics Content Experiment code -->
-		<?php }?>
 		<title>Kosten für eine Webseite schätzen</title>
 		<meta name="Description" content="Mit dem Projektrechner in nur wenigen Minuten herausfinden, was ihre Website kosten wird!">
 		<meta charset="utf8">
@@ -40,8 +24,7 @@ $xml = loadFromXML();
 		<script src="js/jquery.validate.js" type="text/javascript"></script>
 		<script type="text/javascript">
 			var pth = parseInt('<?php echo $xml->price; ?>');
-			var textMessage = <?php if($lang){ ?>"Vielen Dank!<br> Wir haben Ihre Nachricht erhalten und werden Ihnen in Kürze antworten.";<?php }else{ ?>"Thanks, We have received your message!<br> We'll get back to you soon ";<?php }?>
-			
+			var textMessage = <?php if($lang){ ?>"Vielen Dank!<br> Wir haben Ihre Nachricht erhalten und werden Ihnen in Kürze antworten.";<?php }else{ ?>"Thanks, we have received your message!<br> We will reply promptly with the result.";<?php }?>
 			$().ready(function() {
 				// validate signup form on keyup and submit
 				$("#submitForm").validate({
@@ -52,15 +35,11 @@ $xml = loadFromXML();
 						EMAIL: {
 							required: true,
 							email: true
-						},
-						mess: {
-							required: true,
 						}
 					},
 					messages: {
 						ClientName: "Ihr Name",
 						EMAIL: "Ihre E-Mail Adresse",
-						mess: "Ihre Nachricht an uns",
 					},
 					submitHandler: function() {
 						$.ajax({
@@ -73,9 +52,7 @@ $xml = loadFromXML();
 							success: function() {
 								setTimeout(function() {
 									$('#result').empty();
-									$('.result-block').slideUp();
 									$('.message-block').html(textMessage);
-									$('.message-block').fadeIn();
 								}, 300)
 							}
 						});
@@ -682,7 +659,7 @@ $xml = loadFromXML();
 									<div class="span4">
 										<a href="#" onclick="_gaq.push(['_trackEvent', 'PCalculator', 'CalcClick', 'W8wMobApp', time]);">
 											<div>
-												<div class="flip-container" data-value="<?php echo $xml->app->answer1->desc; ?>" data-constant="0">
+												<div class="flip-container" data-value="<?php echo $xml->app->answer1->desc; ?>." data-constant="0">
 													<div class="flipper">
 														<img src="img/check.png" class="empty-image">
 														<img src="img/integrated-icon.png" class="front" alt="Integrate app with a website">
@@ -743,7 +720,7 @@ $xml = loadFromXML();
 									</div>
 									<?php
 									if ($app == "app") {
-										require_once("before.php");
+										require_once("beforeb.php");
 									}
 									?>
 
@@ -763,6 +740,7 @@ $xml = loadFromXML();
 										</li>
 									</ul>
 									<hr>
+									<?php /*
 									<h1 class="descriptor"><?php if($lang){ ?>Geschätzte Kosten:<?php }else{ ?>ESTIMATED COSTS:<?php }?></h1>
 									<h1 class="total">&euro;<span class="data">1000</span><span class="label-price"></span></h1>
 									<br>
@@ -770,8 +748,14 @@ $xml = loadFromXML();
 									<div class="result-block">
 										<?php if($lang){ ?><img src="img/bg-result.png" alt="text"><?php }else{ ?><img src="img/kontaktieren.png" alt=""/><?php }?>
 									</div>
-									<div class="message-block" style="display: none;">
-										
+									 * 
+									 */?>
+									<div class="message-block">
+										<?php if($lang){ ?>
+										Bitte senden Sie uns Ihre E-Mail Adresse.<br> Wir antworten umgehend mit dem Ergebnis.
+										<?php }else{ ?>
+										Please send us your e-mail address.<br> We will reply promptly with the result. 
+										<?php }?>
 									</div>
 									<div class="helper" id="result">
 										<form action="" method="post" id="submitForm" onsubmit='return false;' name="mc-embedded-subscribe-form" class="validate subscribe-form">
@@ -779,10 +763,11 @@ $xml = loadFromXML();
 											<?php echo isset($_POST['features']) ? "<input type='hidden' name='obudget' value='$_POST[budget]'>" : ""; ?>
 											<?php echo isset($_POST['features']) ? "<input type='hidden' name='beforeDesc' value='$_POST[description]/-/$_POST[descriptions]'>" : ""; ?>
 											<input type="hidden" value="sendMail" name="send">
+											<input type="hidden" value="true" name="versionB">
 											<input type="text" value="" name="ClientName" class="required inputtext"  placeholder="<?php if($lang){ ?>Ihr Name<?php }else{ ?>Name<?php }?>">
 											<input type="text" value="" name="EMAIL" class="required email"  placeholder="<?php if($lang){ ?>Ihre E-Mail Adresse<?php }else{ ?>Email<?php }?>">
-											<textarea name="mess" placeholder="<?php if($lang){ ?>Ihre Nachricht an uns.<?php }else{ ?>Message<?php }?>"></textarea>
-											<button type="submit" href="#" class="btn btn-block btn-danger" onclick="_gaq.push(['_trackEvent', 'PCalculator', 'CalcClick', 'WebRepSubmit', time]);"><?php if($lang){ ?>Absenden<?php }else{ ?>SUBMIT YOUR PROJECT<?php }?></button>
+											
+											<button type="submit" href="#" class="btn btn-block btn-danger" onclick="_gaq.push(['_trackEvent', 'WebRep', 'Click', 'WebRepSubmit', 1]);"><?php if($lang){ ?>Absenden & Ergebnis erhalten<?php }else{ ?>Submit & Get result<?php }?></button>
 										</form>
 									</div> <!-- close .helper -->
 									<p class="light" style="margin-top: 10px; margin-bottom: 0; text-align: right; font-size: 12px; font-style: italic;"><a href="index.php"><?php if($lang){ ?>Noch einmal / Ein anderes Projekt durchrechnen<?php }else{ ?>Estimate another project<?php }?></a></p>
